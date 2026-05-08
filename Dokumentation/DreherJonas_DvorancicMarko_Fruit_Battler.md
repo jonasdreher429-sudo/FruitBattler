@@ -53,10 +53,17 @@ Wir planen ein Spiel in WPF zu programmieren, in welchem man mit seinem Team von
 
 
 ## Realisierung der Must Haves:
+-Klassen-
 
 
-<br>
+
 ## Nice To Haves:
-- Shop (Früchte müssen gekauft werden)
+- Shop
 - Lexikon in dem alle Früchte und deren Daten wie HP, Attacken stehen
-- 
+- Chance für kritische Treffer (3x Schaden)
+- Verschiedene Arenen
+- Status Effekte wie Brennen, Vergiften, ...
+- Intelligentere Bots
+- Achievments
+- Selbstheilungs "Attacken"
+- Double Types (eine Frucht kann mehrere Types haben)
