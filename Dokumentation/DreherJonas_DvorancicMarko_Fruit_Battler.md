@@ -56,7 +56,7 @@ Wir planen ein Spiel in WPF zu programmieren, in welchem man mit seinem Team von
 -Klassen-
 
 
-<br>
+
 ## Nice To Haves:
 - Shop
 - Lexikon in dem alle Früchte und deren Daten wie HP, Attacken stehen
