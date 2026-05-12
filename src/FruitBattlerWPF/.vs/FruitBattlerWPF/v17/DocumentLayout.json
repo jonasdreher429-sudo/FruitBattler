@@ -1,13 +1,53 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Marko\\OneDrive\\Desktop\\Schule\\POS1\\2_Klasse\\PosProjektMitJonyBoy\\FruitBattler\\src\\FruitBattlerWPF\\",
+  "WorkspaceRootPath": "C:\\2AHIF\\POS\\FruitBattler\\src\\FruitBattlerWPF\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B1C90727-A4E7-48B9-91E6-6DF0CF70837A}|FruitBattlerWPF.csproj|c:\\users\\marko\\onedrive\\desktop\\schule\\pos1\\2_klasse\\posprojektmitjonyboy\\fruitbattler\\src\\fruitbattlerwpf\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{B1C90727-A4E7-48B9-91E6-6DF0CF70837A}|FruitBattlerWPF.csproj|c:\\2ahif\\pos\\fruitbattler\\src\\fruitbattlerwpf\\type.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B1C90727-A4E7-48B9-91E6-6DF0CF70837A}|FruitBattlerWPF.csproj|solutionrelative:type.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B1C90727-A4E7-48B9-91E6-6DF0CF70837A}|FruitBattlerWPF.csproj|c:\\2ahif\\pos\\fruitbattler\\src\\fruitbattlerwpf\\classes\\duengercycle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B1C90727-A4E7-48B9-91E6-6DF0CF70837A}|FruitBattlerWPF.csproj|solutionrelative:classes\\duengercycle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B1C90727-A4E7-48B9-91E6-6DF0CF70837A}|FruitBattlerWPF.csproj|c:\\2ahif\\pos\\fruitbattler\\src\\fruitbattlerwpf\\classes\\typeeffectines.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B1C90727-A4E7-48B9-91E6-6DF0CF70837A}|FruitBattlerWPF.csproj|solutionrelative:classes\\typeeffectines.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B1C90727-A4E7-48B9-91E6-6DF0CF70837A}|FruitBattlerWPF.csproj|c:\\2ahif\\pos\\fruitbattler\\src\\fruitbattlerwpf\\classes\\fruitteam.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B1C90727-A4E7-48B9-91E6-6DF0CF70837A}|FruitBattlerWPF.csproj|solutionrelative:classes\\fruitteam.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B1C90727-A4E7-48B9-91E6-6DF0CF70837A}|FruitBattlerWPF.csproj|c:\\2ahif\\pos\\fruitbattler\\src\\fruitbattlerwpf\\classes\\fruit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B1C90727-A4E7-48B9-91E6-6DF0CF70837A}|FruitBattlerWPF.csproj|solutionrelative:classes\\fruit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B1C90727-A4E7-48B9-91E6-6DF0CF70837A}|FruitBattlerWPF.csproj|c:\\2ahif\\pos\\fruitbattler\\src\\fruitbattlerwpf\\classes\\move.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B1C90727-A4E7-48B9-91E6-6DF0CF70837A}|FruitBattlerWPF.csproj|solutionrelative:classes\\move.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B1C90727-A4E7-48B9-91E6-6DF0CF70837A}|FruitBattlerWPF.csproj|c:\\2ahif\\pos\\fruitbattler\\src\\fruitbattlerwpf\\classes\\teambuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B1C90727-A4E7-48B9-91E6-6DF0CF70837A}|FruitBattlerWPF.csproj|solutionrelative:classes\\teambuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B1C90727-A4E7-48B9-91E6-6DF0CF70837A}|FruitBattlerWPF.csproj|c:\\2ahif\\pos\\fruitbattler\\src\\fruitbattlerwpf\\classes\\enemyki.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B1C90727-A4E7-48B9-91E6-6DF0CF70837A}|FruitBattlerWPF.csproj|solutionrelative:classes\\enemyki.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B1C90727-A4E7-48B9-91E6-6DF0CF70837A}|FruitBattlerWPF.csproj|c:\\2ahif\\pos\\fruitbattler\\src\\fruitbattlerwpf\\classes\\gamevisualizer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B1C90727-A4E7-48B9-91E6-6DF0CF70837A}|FruitBattlerWPF.csproj|solutionrelative:classes\\gamevisualizer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B1C90727-A4E7-48B9-91E6-6DF0CF70837A}|FruitBattlerWPF.csproj|c:\\2ahif\\pos\\fruitbattler\\src\\fruitbattlerwpf\\classes\\gamehandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B1C90727-A4E7-48B9-91E6-6DF0CF70837A}|FruitBattlerWPF.csproj|solutionrelative:classes\\gamehandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B1C90727-A4E7-48B9-91E6-6DF0CF70837A}|FruitBattlerWPF.csproj|c:\\2ahif\\pos\\fruitbattler\\src\\fruitbattlerwpf\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{B1C90727-A4E7-48B9-91E6-6DF0CF70837A}|FruitBattlerWPF.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B1C90727-A4E7-48B9-91E6-6DF0CF70837A}|FruitBattlerWPF.csproj|c:\\users\\marko\\onedrive\\desktop\\schule\\pos1\\2_klasse\\posprojektmitjonyboy\\fruitbattler\\src\\fruitbattlerwpf\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B1C90727-A4E7-48B9-91E6-6DF0CF70837A}|FruitBattlerWPF.csproj|c:\\2ahif\\pos\\fruitbattler\\src\\fruitbattlerwpf\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B1C90727-A4E7-48B9-91E6-6DF0CF70837A}|FruitBattlerWPF.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -22,19 +62,149 @@
           "Children": [
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Type.cs",
+              "DocumentMoniker": "C:\\2AHIF\\POS\\FruitBattler\\src\\FruitBattlerWPF\\Type.cs",
+              "RelativeDocumentMoniker": "Type.cs",
+              "ToolTip": "C:\\2AHIF\\POS\\FruitBattler\\src\\FruitBattlerWPF\\Type.cs",
+              "RelativeToolTip": "Type.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-12T14:53:36.637Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Duengercycle.cs",
+              "DocumentMoniker": "C:\\2AHIF\\POS\\FruitBattler\\src\\FruitBattlerWPF\\Classes\\Duengercycle.cs",
+              "RelativeDocumentMoniker": "Classes\\Duengercycle.cs",
+              "ToolTip": "C:\\2AHIF\\POS\\FruitBattler\\src\\FruitBattlerWPF\\Classes\\Duengercycle.cs",
+              "RelativeToolTip": "Classes\\Duengercycle.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-12T14:52:46.674Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TypeEffectines.cs",
+              "DocumentMoniker": "C:\\2AHIF\\POS\\FruitBattler\\src\\FruitBattlerWPF\\Classes\\TypeEffectines.cs",
+              "RelativeDocumentMoniker": "Classes\\TypeEffectines.cs",
+              "ToolTip": "C:\\2AHIF\\POS\\FruitBattler\\src\\FruitBattlerWPF\\Classes\\TypeEffectines.cs",
+              "RelativeToolTip": "Classes\\TypeEffectines.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-12T14:52:30.898Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FruitTeam.cs",
+              "DocumentMoniker": "C:\\2AHIF\\POS\\FruitBattler\\src\\FruitBattlerWPF\\Classes\\FruitTeam.cs",
+              "RelativeDocumentMoniker": "Classes\\FruitTeam.cs",
+              "ToolTip": "C:\\2AHIF\\POS\\FruitBattler\\src\\FruitBattlerWPF\\Classes\\FruitTeam.cs",
+              "RelativeToolTip": "Classes\\FruitTeam.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-12T14:52:12.934Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Fruit.cs",
+              "DocumentMoniker": "C:\\2AHIF\\POS\\FruitBattler\\src\\FruitBattlerWPF\\Classes\\Fruit.cs",
+              "RelativeDocumentMoniker": "Classes\\Fruit.cs",
+              "ToolTip": "C:\\2AHIF\\POS\\FruitBattler\\src\\FruitBattlerWPF\\Classes\\Fruit.cs",
+              "RelativeToolTip": "Classes\\Fruit.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-12T14:51:52.447Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Move.cs",
+              "DocumentMoniker": "C:\\2AHIF\\POS\\FruitBattler\\src\\FruitBattlerWPF\\Classes\\Move.cs",
+              "RelativeDocumentMoniker": "Classes\\Move.cs",
+              "ToolTip": "C:\\2AHIF\\POS\\FruitBattler\\src\\FruitBattlerWPF\\Classes\\Move.cs",
+              "RelativeToolTip": "Classes\\Move.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-12T14:51:29.767Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "TeamBuilder.cs",
+              "DocumentMoniker": "C:\\2AHIF\\POS\\FruitBattler\\src\\FruitBattlerWPF\\Classes\\TeamBuilder.cs",
+              "RelativeDocumentMoniker": "Classes\\TeamBuilder.cs",
+              "ToolTip": "C:\\2AHIF\\POS\\FruitBattler\\src\\FruitBattlerWPF\\Classes\\TeamBuilder.cs",
+              "RelativeToolTip": "Classes\\TeamBuilder.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-12T14:51:12.077Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "EnemyKI.cs",
+              "DocumentMoniker": "C:\\2AHIF\\POS\\FruitBattler\\src\\FruitBattlerWPF\\Classes\\EnemyKI.cs",
+              "RelativeDocumentMoniker": "Classes\\EnemyKI.cs",
+              "ToolTip": "C:\\2AHIF\\POS\\FruitBattler\\src\\FruitBattlerWPF\\Classes\\EnemyKI.cs",
+              "RelativeToolTip": "Classes\\EnemyKI.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-12T14:50:56.472Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "GameVisualizer.cs",
+              "DocumentMoniker": "C:\\2AHIF\\POS\\FruitBattler\\src\\FruitBattlerWPF\\Classes\\GameVisualizer.cs",
+              "RelativeDocumentMoniker": "Classes\\GameVisualizer.cs",
+              "ToolTip": "C:\\2AHIF\\POS\\FruitBattler\\src\\FruitBattlerWPF\\Classes\\GameVisualizer.cs",
+              "RelativeToolTip": "Classes\\GameVisualizer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-12T14:50:41.23Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "GameHandler.cs",
+              "DocumentMoniker": "C:\\2AHIF\\POS\\FruitBattler\\src\\FruitBattlerWPF\\Classes\\GameHandler.cs",
+              "RelativeDocumentMoniker": "Classes\\GameHandler.cs",
+              "ToolTip": "C:\\2AHIF\\POS\\FruitBattler\\src\\FruitBattlerWPF\\Classes\\GameHandler.cs",
+              "RelativeToolTip": "Classes\\GameHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-12T14:50:17.433Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "MainWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\Marko\\OneDrive\\Desktop\\Schule\\POS1\\2_Klasse\\PosProjektMitJonyBoy\\FruitBattler\\src\\FruitBattlerWPF\\MainWindow.xaml",
+              "DocumentMoniker": "C:\\2AHIF\\POS\\FruitBattler\\src\\FruitBattlerWPF\\MainWindow.xaml",
               "RelativeDocumentMoniker": "MainWindow.xaml",
-              "ToolTip": "C:\\Users\\Marko\\OneDrive\\Desktop\\Schule\\POS1\\2_Klasse\\PosProjektMitJonyBoy\\FruitBattler\\src\\FruitBattlerWPF\\MainWindow.xaml",
+              "ToolTip": "C:\\2AHIF\\POS\\FruitBattler\\src\\FruitBattlerWPF\\MainWindow.xaml",
               "RelativeToolTip": "MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2026-05-12T14:27:56.241Z",
@@ -42,16 +212,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 11,
               "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\Marko\\OneDrive\\Desktop\\Schule\\POS1\\2_Klasse\\PosProjektMitJonyBoy\\FruitBattler\\src\\FruitBattlerWPF\\MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\2AHIF\\POS\\FruitBattler\\src\\FruitBattlerWPF\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "MainWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\Marko\\OneDrive\\Desktop\\Schule\\POS1\\2_Klasse\\PosProjektMitJonyBoy\\FruitBattler\\src\\FruitBattlerWPF\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\2AHIF\\POS\\FruitBattler\\src\\FruitBattlerWPF\\MainWindow.xaml.cs",
               "RelativeToolTip": "MainWindow.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-12T14:27:53.117Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-12T14:27:53.117Z"
             }
           ]
         }
