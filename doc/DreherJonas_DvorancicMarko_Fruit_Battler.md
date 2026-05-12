@@ -15,7 +15,7 @@ Retrieved 2026-05-08, License - CC BY-SA 4.0
 
 
 
-## Must Haves:
+## Must Haves
 - 12 Früchte mit jeweiligem Typen, HP, DMG
   - Pyronana (Banane, Feuer)
   - Aquabeere (Blaubeere, Wasser)
@@ -72,6 +72,9 @@ Retrieved 2026-05-08, License - CC BY-SA 4.0
 - Achievments
 - Selbstheilungs "Attacken"
 - Double Types (eine Frucht kann mehrere Types haben)
+
+Das Game wird (sehr) grob so aussehen:
+<img src="GUI.png" alt="GUI"/>
 
 
 
