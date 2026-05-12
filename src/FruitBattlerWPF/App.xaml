@@ -1,7 +1,7 @@
-﻿<Application x:Class="FruitBattler.App"
+﻿<Application x:Class="FruitBattlerWPF.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:FruitBattler"
+             xmlns:local="clr-namespace:FruitBattlerWPF"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
          

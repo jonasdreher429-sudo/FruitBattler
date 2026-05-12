@@ -2,7 +2,7 @@
 using System.Data;
 using System.Windows;
 
-namespace FruitBattler
+namespace FruitBattlerWPF
 {
     /// <summary>
     /// Interaction logic for App.xaml
