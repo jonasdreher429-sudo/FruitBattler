@@ -1,0 +1,24 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace FruitBattlerWPF
+{
+    enum Type
+    {
+        Feuer,
+        Wasser,
+        Elektro,
+        Pflanze,
+        Eis,
+        Erde,
+        Flug,
+        Psycho,
+        Gift,
+        Gestein,
+        Unlicht,
+        Licht
+    }
+}
