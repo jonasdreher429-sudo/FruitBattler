@@ -3,19 +3,7 @@
   "WorkspaceRootPath": "C:\\2AHIF\\POS\\FruitBattler\\src\\FruitBattlerWPF\\",
   "Documents": [
     {
-<<<<<<< HEAD
       "AbsoluteMoniker": "D:0:0:{B1C90727-A4E7-48B9-91E6-6DF0CF70837A}|FruitBattlerWPF.csproj|c:\\2ahif\\pos\\fruitbattler\\src\\fruitbattlerwpf\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-=======
-      "AbsoluteMoniker": "D:0:0:{B1C90727-A4E7-48B9-91E6-6DF0CF70837A}|FruitBattlerWPF.csproj|c:\\users\\marko\\onedrive\\desktop\\schule\\pos1\\2_klasse\\posprojektmitjonyboy\\fruitbattler\\src\\fruitbattlerwpf\\pages\\teambuilderpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{B1C90727-A4E7-48B9-91E6-6DF0CF70837A}|FruitBattlerWPF.csproj|solutionrelative:pages\\teambuilderpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B1C90727-A4E7-48B9-91E6-6DF0CF70837A}|FruitBattlerWPF.csproj|c:\\users\\marko\\onedrive\\desktop\\schule\\pos1\\2_klasse\\posprojektmitjonyboy\\fruitbattler\\src\\fruitbattlerwpf\\pages\\gamepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{B1C90727-A4E7-48B9-91E6-6DF0CF70837A}|FruitBattlerWPF.csproj|solutionrelative:pages\\gamepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B1C90727-A4E7-48B9-91E6-6DF0CF70837A}|FruitBattlerWPF.csproj|c:\\users\\marko\\onedrive\\desktop\\schule\\pos1\\2_klasse\\posprojektmitjonyboy\\fruitbattler\\src\\fruitbattlerwpf\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
->>>>>>> bfb0660886f2ccf1c6ad569cf74aad9abb07105b
       "RelativeMoniker": "D:0:0:{B1C90727-A4E7-48B9-91E6-6DF0CF70837A}|FruitBattlerWPF.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
@@ -43,30 +31,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "TeamBuilderPage.xaml",
-              "DocumentMoniker": "C:\\Users\\Marko\\OneDrive\\Desktop\\Schule\\POS1\\2_Klasse\\PosProjektMitJonyBoy\\FruitBattler\\src\\FruitBattlerWPF\\Pages\\TeamBuilderPage.xaml",
-              "RelativeDocumentMoniker": "Pages\\TeamBuilderPage.xaml",
-              "ToolTip": "C:\\Users\\Marko\\OneDrive\\Desktop\\Schule\\POS1\\2_Klasse\\PosProjektMitJonyBoy\\FruitBattler\\src\\FruitBattlerWPF\\Pages\\TeamBuilderPage.xaml",
-              "RelativeToolTip": "Pages\\TeamBuilderPage.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-05-12T14:54:59.99Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "GamePage.xaml",
-              "DocumentMoniker": "C:\\Users\\Marko\\OneDrive\\Desktop\\Schule\\POS1\\2_Klasse\\PosProjektMitJonyBoy\\FruitBattler\\src\\FruitBattlerWPF\\Pages\\GamePage.xaml",
-              "RelativeDocumentMoniker": "Pages\\GamePage.xaml",
-              "ToolTip": "C:\\Users\\Marko\\OneDrive\\Desktop\\Schule\\POS1\\2_Klasse\\PosProjektMitJonyBoy\\FruitBattler\\src\\FruitBattlerWPF\\Pages\\GamePage.xaml",
-              "RelativeToolTip": "Pages\\GamePage.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-05-12T14:54:36.876Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\2AHIF\\POS\\FruitBattler\\src\\FruitBattlerWPF\\MainWindow.xaml",
               "RelativeDocumentMoniker": "MainWindow.xaml",
@@ -78,7 +42,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "C:\\2AHIF\\POS\\FruitBattler\\src\\FruitBattlerWPF\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "MainWindow.xaml.cs",
