@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\Marko\\OneDrive\\Desktop\\Schule\\POS1\\2_Klasse\\PosProjektMitJonyBoy\\FruitBattler\\src\\FruitBattlerWPF\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{B1C90727-A4E7-48B9-91E6-6DF0CF70837A}|FruitBattlerWPF.csproj|c:\\users\\marko\\onedrive\\desktop\\schule\\pos1\\2_klasse\\posprojektmitjonyboy\\fruitbattler\\src\\fruitbattlerwpf\\classes\\logger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B1C90727-A4E7-48B9-91E6-6DF0CF70837A}|FruitBattlerWPF.csproj|solutionrelative:classes\\logger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{B1C90727-A4E7-48B9-91E6-6DF0CF70837A}|FruitBattlerWPF.csproj|c:\\users\\marko\\onedrive\\desktop\\schule\\pos1\\2_klasse\\posprojektmitjonyboy\\fruitbattler\\src\\fruitbattlerwpf\\usercontrols\\voltimetteusercontrol.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{B1C90727-A4E7-48B9-91E6-6DF0CF70837A}|FruitBattlerWPF.csproj|solutionrelative:usercontrols\\voltimetteusercontrol.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
@@ -54,7 +58,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -66,127 +70,130 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
+              "Title": "Logger.cs",
+              "DocumentMoniker": "C:\\Users\\Marko\\OneDrive\\Desktop\\Schule\\POS1\\2_Klasse\\PosProjektMitJonyBoy\\FruitBattler\\src\\FruitBattlerWPF\\Classes\\Logger.cs",
+              "RelativeDocumentMoniker": "Classes\\Logger.cs",
+              "ToolTip": "C:\\Users\\Marko\\OneDrive\\Desktop\\Schule\\POS1\\2_Klasse\\PosProjektMitJonyBoy\\FruitBattler\\src\\FruitBattlerWPF\\Classes\\Logger.cs",
+              "RelativeToolTip": "Classes\\Logger.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-20T10:19:32.911Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "ToxibirneUserControl.xaml",
               "DocumentMoniker": "C:\\Users\\Marko\\OneDrive\\Desktop\\Schule\\POS1\\2_Klasse\\PosProjektMitJonyBoy\\FruitBattler\\src\\FruitBattlerWPF\\UserControls\\ToxibirneUserControl.xaml",
               "RelativeDocumentMoniker": "UserControls\\ToxibirneUserControl.xaml",
               "ToolTip": "C:\\Users\\Marko\\OneDrive\\Desktop\\Schule\\POS1\\2_Klasse\\PosProjektMitJonyBoy\\FruitBattler\\src\\FruitBattlerWPF\\UserControls\\ToxibirneUserControl.xaml",
               "RelativeToolTip": "UserControls\\ToxibirneUserControl.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-05-13T10:29:59.703Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-13T10:29:59.703Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "MystikokosUserControl.xaml",
               "DocumentMoniker": "C:\\Users\\Marko\\OneDrive\\Desktop\\Schule\\POS1\\2_Klasse\\PosProjektMitJonyBoy\\FruitBattler\\src\\FruitBattlerWPF\\UserControls\\MystikokosUserControl.xaml",
               "RelativeDocumentMoniker": "UserControls\\MystikokosUserControl.xaml",
               "ToolTip": "C:\\Users\\Marko\\OneDrive\\Desktop\\Schule\\POS1\\2_Klasse\\PosProjektMitJonyBoy\\FruitBattler\\src\\FruitBattlerWPF\\UserControls\\MystikokosUserControl.xaml",
               "RelativeToolTip": "UserControls\\MystikokosUserControl.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-05-13T10:29:46.548Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-13T10:29:46.548Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "WindpfirsichUserControl.xaml",
               "DocumentMoniker": "C:\\Users\\Marko\\OneDrive\\Desktop\\Schule\\POS1\\2_Klasse\\PosProjektMitJonyBoy\\FruitBattler\\src\\FruitBattlerWPF\\UserControls\\WindpfirsichUserControl.xaml",
               "RelativeDocumentMoniker": "UserControls\\WindpfirsichUserControl.xaml",
               "ToolTip": "C:\\Users\\Marko\\OneDrive\\Desktop\\Schule\\POS1\\2_Klasse\\PosProjektMitJonyBoy\\FruitBattler\\src\\FruitBattlerWPF\\UserControls\\WindpfirsichUserControl.xaml",
               "RelativeToolTip": "UserControls\\WindpfirsichUserControl.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-05-13T10:29:30.684Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-13T10:29:30.684Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "TerrangoUserControl.xaml",
               "DocumentMoniker": "C:\\Users\\Marko\\OneDrive\\Desktop\\Schule\\POS1\\2_Klasse\\PosProjektMitJonyBoy\\FruitBattler\\src\\FruitBattlerWPF\\UserControls\\TerrangoUserControl.xaml",
               "RelativeDocumentMoniker": "UserControls\\TerrangoUserControl.xaml",
               "ToolTip": "C:\\Users\\Marko\\OneDrive\\Desktop\\Schule\\POS1\\2_Klasse\\PosProjektMitJonyBoy\\FruitBattler\\src\\FruitBattlerWPF\\UserControls\\TerrangoUserControl.xaml",
               "RelativeToolTip": "UserControls\\TerrangoUserControl.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-05-13T10:29:15.78Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-13T10:29:15.78Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "FrostubeUserControl.xaml",
               "DocumentMoniker": "C:\\Users\\Marko\\OneDrive\\Desktop\\Schule\\POS1\\2_Klasse\\PosProjektMitJonyBoy\\FruitBattler\\src\\FruitBattlerWPF\\UserControls\\FrostubeUserControl.xaml",
               "RelativeDocumentMoniker": "UserControls\\FrostubeUserControl.xaml",
               "ToolTip": "C:\\Users\\Marko\\OneDrive\\Desktop\\Schule\\POS1\\2_Klasse\\PosProjektMitJonyBoy\\FruitBattler\\src\\FruitBattlerWPF\\UserControls\\FrostubeUserControl.xaml",
               "RelativeToolTip": "UserControls\\FrostubeUserControl.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-05-13T10:28:59.546Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-13T10:28:59.546Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "FlorapfelUserControl.xaml",
               "DocumentMoniker": "C:\\Users\\Marko\\OneDrive\\Desktop\\Schule\\POS1\\2_Klasse\\PosProjektMitJonyBoy\\FruitBattler\\src\\FruitBattlerWPF\\UserControls\\FlorapfelUserControl.xaml",
               "RelativeDocumentMoniker": "UserControls\\FlorapfelUserControl.xaml",
               "ToolTip": "C:\\Users\\Marko\\OneDrive\\Desktop\\Schule\\POS1\\2_Klasse\\PosProjektMitJonyBoy\\FruitBattler\\src\\FruitBattlerWPF\\UserControls\\FlorapfelUserControl.xaml",
               "RelativeToolTip": "UserControls\\FlorapfelUserControl.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-05-13T10:28:40.81Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-13T10:28:40.81Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "VoltimetteUserControl.xaml",
               "DocumentMoniker": "C:\\Users\\Marko\\OneDrive\\Desktop\\Schule\\POS1\\2_Klasse\\PosProjektMitJonyBoy\\FruitBattler\\src\\FruitBattlerWPF\\UserControls\\VoltimetteUserControl.xaml",
               "RelativeDocumentMoniker": "UserControls\\VoltimetteUserControl.xaml",
               "ToolTip": "C:\\Users\\Marko\\OneDrive\\Desktop\\Schule\\POS1\\2_Klasse\\PosProjektMitJonyBoy\\FruitBattler\\src\\FruitBattlerWPF\\UserControls\\VoltimetteUserControl.xaml",
               "RelativeToolTip": "UserControls\\VoltimetteUserControl.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-05-13T10:28:07.466Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-13T10:28:07.466Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "AquabeereUserControl.xaml",
               "DocumentMoniker": "C:\\Users\\Marko\\OneDrive\\Desktop\\Schule\\POS1\\2_Klasse\\PosProjektMitJonyBoy\\FruitBattler\\src\\FruitBattlerWPF\\UserControls\\AquabeereUserControl.xaml",
               "RelativeDocumentMoniker": "UserControls\\AquabeereUserControl.xaml",
               "ToolTip": "C:\\Users\\Marko\\OneDrive\\Desktop\\Schule\\POS1\\2_Klasse\\PosProjektMitJonyBoy\\FruitBattler\\src\\FruitBattlerWPF\\UserControls\\AquabeereUserControl.xaml",
               "RelativeToolTip": "UserControls\\AquabeereUserControl.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-05-13T10:27:46.762Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-13T10:27:46.762Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "PyronanaUserControl.xaml",
               "DocumentMoniker": "C:\\Users\\Marko\\OneDrive\\Desktop\\Schule\\POS1\\2_Klasse\\PosProjektMitJonyBoy\\FruitBattler\\src\\FruitBattlerWPF\\UserControls\\PyronanaUserControl.xaml",
               "RelativeDocumentMoniker": "UserControls\\PyronanaUserControl.xaml",
               "ToolTip": "C:\\Users\\Marko\\OneDrive\\Desktop\\Schule\\POS1\\2_Klasse\\PosProjektMitJonyBoy\\FruitBattler\\src\\FruitBattlerWPF\\UserControls\\PyronanaUserControl.xaml",
               "RelativeToolTip": "UserControls\\PyronanaUserControl.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-05-13T10:27:04.918Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-13T10:27:04.918Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Users\\Marko\\OneDrive\\Desktop\\Schule\\POS1\\2_Klasse\\PosProjektMitJonyBoy\\FruitBattler\\src\\FruitBattlerWPF\\MainWindow.xaml",
               "RelativeDocumentMoniker": "MainWindow.xaml",
               "ToolTip": "C:\\Users\\Marko\\OneDrive\\Desktop\\Schule\\POS1\\2_Klasse\\PosProjektMitJonyBoy\\FruitBattler\\src\\FruitBattlerWPF\\MainWindow.xaml",
               "RelativeToolTip": "MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-05-12T14:27:56.241Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-12T14:27:56.241Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Marko\\OneDrive\\Desktop\\Schule\\POS1\\2_Klasse\\PosProjektMitJonyBoy\\FruitBattler\\src\\FruitBattlerWPF\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "MainWindow.xaml.cs",
@@ -194,8 +201,7 @@
               "RelativeToolTip": "MainWindow.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-12T14:27:53.117Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-12T14:27:53.117Z"
             }
           ]
         }
