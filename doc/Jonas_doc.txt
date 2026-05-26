@@ -13,3 +13,8 @@
 	Completed the Fruit Class 
 	Gitignore verbessert
 	Implemted FruitTeam
+
+26.5
+	Deleted TypeEffectinies file because we already run the calcs in the Fruit Receive Damage
+	
+	Implemted FruitTeam
