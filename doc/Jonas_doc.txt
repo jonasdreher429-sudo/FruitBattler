@@ -1,0 +1,19 @@
+8.5
+	Added Klassen.txt
+	Added a draw.io class Diagramm
+	Added the class diagram to our documentation
+
+13.5
+	Added classes Folder and the enum for type
+	Added the Name_doc.txt files
+	Created a good Looking MainWindow with ChatGPT
+	Implemented DuengerCycle.cs
+
+20.5
+	Completed the Fruit Class 
+	Gitignore verbessert
+	Implemted FruitTeam
+
+26.5
+	Deleted TypeEffectinies file because we already run the calcs in the Fruit Receive Damage
+	
