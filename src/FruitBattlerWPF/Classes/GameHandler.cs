@@ -41,10 +41,10 @@ namespace FruitBattlerWPF.Classes
 
         }
 
-        public int CalculateDamage()
-        {
+        // public int CalculateDamage()
+        // {
 
-        }
+        // }
 
         public void ApplyMove()
         {
@@ -61,10 +61,10 @@ namespace FruitBattlerWPF.Classes
 
         }
 
-        public int GetNextDuengerValue()
-        {
+        // public int GetNextDuengerValue()
+        // {
 
-        }
+        // }
 
 
     }

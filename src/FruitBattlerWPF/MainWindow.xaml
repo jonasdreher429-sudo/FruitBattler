@@ -185,14 +185,14 @@
                 <StackPanel VerticalAlignment="Center"
                             HorizontalAlignment="Center">
 
-                    <Button Content="Start"
-                            Style="{StaticResource GrassButtonStyle}"/>
+                    <Button x:Name="ButtonStart" Content="Start"
+                            Style="{StaticResource GrassButtonStyle}" Click="ButtonStart_Click"/>
 
-                    <Button Content="TeamBuilder"
-                            Style="{StaticResource GrassButtonStyle}"/>
+                    <Button x:Name="ButtonTeamBuilder" Content="TeamBuilder"
+                            Style="{StaticResource GrassButtonStyle}" Click="ButtonTeamBuilder_Click"/>
 
-                    <Button Content="Exit"
-                            Style="{StaticResource GrassButtonStyle}"/>
+                    <Button x:Name="ButtonExit" Content="Exit"
+                            Style="{StaticResource GrassButtonStyle}" Click="ButtonExit_Click"/>
 
                 </StackPanel>
             </Border>
@@ -207,7 +207,6 @@
                 <Ellipse Width="10" Height="10" Fill="#B7F26C" Margin="6"/>
                 <Ellipse Width="14" Height="14" Fill="#D6FF8A" Margin="6"/>
             </StackPanel>
-
         </Grid>
     </Grid>
 </Window>
