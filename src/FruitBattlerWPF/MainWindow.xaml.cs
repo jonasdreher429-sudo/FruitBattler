@@ -1,4 +1,7 @@
-﻿using System.Text;
+﻿using FruitBattlerWPF.Classes;
+using FruitBattlerWPF.Pages;
+using System.ComponentModel;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -19,6 +22,26 @@ namespace FruitBattlerWPF
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void ButtonStart_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+
+
+        private void ButtonTeamBuilder_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+
+
+        private void ButtonExit_Click(object sender, RoutedEventArgs e)
+        {
+            Logger.Information("Program Shutdown");
+            Application.Current.Shutdown();
         }
     }
 }

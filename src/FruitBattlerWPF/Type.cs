@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FruitBattlerWPF
 {
-    enum Type
+    public enum Type
     {
         Feuer,
         Wasser,
