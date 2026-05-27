@@ -7,6 +7,6 @@
              mc:Ignorable="d" 
              d:DesignHeight="80" d:DesignWidth="80">
     <Canvas>
-        <Ellipse Width="80" Height="80" Fill="#a86d32" Margin="0,0,720,370"/>
+        <Ellipse Width="80" Height="80" Fill="Pink" Margin="0,0,720,370"/>
     </Canvas>
 </UserControl>
