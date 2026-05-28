@@ -19,10 +19,18 @@ namespace FruitBattlerWPF
     /// </summary>
     public partial class MainWindow : Window
     {
+        public List<Fruit> allfruits = new List<Fruit>();
         public MainWindow()
         {
             InitializeComponent();
         }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            allfruits = FruitGenerator.CreateAllFruits();
+        }
+
+
 
         private void ButtonStart_Click(object sender, RoutedEventArgs e)
         {
@@ -43,5 +51,7 @@ namespace FruitBattlerWPF
             Logger.Information("Program Shutdown");
             Application.Current.Shutdown();
         }
+
+       
     }
 }

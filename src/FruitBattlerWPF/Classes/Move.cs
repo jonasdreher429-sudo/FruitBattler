@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FruitBattlerWPF.Classes
 {
-    class Move
+    public class Move
     {
         public string Name;
         public Type type;

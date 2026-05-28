@@ -10,17 +10,16 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace FruitBattlerWPF.Pages
+namespace FruitBattlerWPF.Pages_window
 {
     /// <summary>
-    /// Interaktionslogik für TeamBuilderPage.xaml
+    /// Interaktionslogik für TeamBuilder.xaml
     /// </summary>
-    public partial class TeamBuilderPage : Page
+    public partial class TeamBuilder : Window
     {
-        public TeamBuilderPage()
+        public TeamBuilder()
         {
             InitializeComponent();
         }

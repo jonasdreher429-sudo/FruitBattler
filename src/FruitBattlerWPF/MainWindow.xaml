@@ -13,7 +13,8 @@
         Width="1280"
         WindowStartupLocation="CenterScreen"
         ResizeMode="NoResize"
-        Background="#1E3B1E">
+        Background="#1E3B1E"
+        Loaded="Window_Loaded">
 
     <Window.Resources>
 
