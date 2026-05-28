@@ -8,7 +8,7 @@ using System.Windows.Controls;
 
 namespace FruitBattlerWPF.Classes
 {
-    class Fruit
+    public class Fruit
     {
         public string Name;
         public Type FruitType;
