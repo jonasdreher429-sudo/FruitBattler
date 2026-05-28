@@ -21,6 +21,7 @@ namespace FruitBattlerWPF.Classes
         public Move[] MoveSet;
         public UserControl? FruitControl;
 
+        public Fruit() { }
 
         public Fruit(string name,Type fruittype,int maxhp,int attack,int deffense, int speed, Move[] moveset, UserControl FruitControl)
         {

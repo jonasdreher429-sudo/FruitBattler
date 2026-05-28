@@ -14,6 +14,17 @@ namespace FruitBattlerWPF.Classes
         public int Duengercost;
         public string Description = string.Empty;
 
+
+        public Move () { }
+        public Move(string name, Type type, int damage, int duengercost, string description)
+        {
+            Name = name;
+            this.type = type;
+            Damage = damage;
+            Duengercost = duengercost;
+            Description = description;
+        }
+
         public double UseMove()
         {
             return Damage;
