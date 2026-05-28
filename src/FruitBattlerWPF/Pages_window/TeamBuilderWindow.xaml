@@ -80,53 +80,52 @@
             </Border.Effect>
 
             <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
-                <WrapPanel HorizontalAlignment="Center" ItemWidth="190" ItemHeight="230">
-
-                    <Border Margin="10" CornerRadius="10" Background="{StaticResource LightGreenBg}" BorderThickness="1" BorderBrush="#C8E6C9" Cursor="Hand">
+                <WrapPanel x:Name="FruitPanel" HorizontalAlignment="Center" ItemWidth="190" ItemHeight="230">
+                    <Border x:Name="Border_PyronanaUserControl" MouseLeftButtonDown="Border_PyronanaUserControl_MouseLeftButtonDown" Margin="10" CornerRadius="10" Background="{StaticResource LightGreenBg}" BorderThickness="1" BorderBrush="#C8E6C9" Cursor="Hand" >
                         <uc:PyronanaUserControl x:Name="UcPyronana" Margin="8"/>
                     </Border>
 
-                    <Border Margin="10" CornerRadius="10" Background="{StaticResource LightGreenBg}" BorderThickness="1" BorderBrush="#C8E6C9" Cursor="Hand">
-                        <uc:AquabeereUserControl x:Name="UcAquabeere" Margin="8"/>
+                    <Border x:Name="Border_AquabeereUserControl" MouseLeftButtonDown="Border_AquabeereUserControl_MouseLeftButtonDown" Margin="10" CornerRadius="10" Background="{StaticResource LightGreenBg}" BorderThickness="1" BorderBrush="#C8E6C9" Cursor="Hand">
+                        <uc:AquabeereUserControl x:Name="UcAquabeere" Margin="8" Height="195" Width="148"/>
                     </Border>
 
-                    <Border Margin="10" CornerRadius="10" Background="{StaticResource LightGreenBg}" BorderThickness="1" BorderBrush="#C8E6C9" Cursor="Hand">
+                    <Border x:Name="Border_VoltimetteUserControl" MouseLeftButtonDown="Border_VoltimetteUserControl_MouseLeftButtonDown" Margin="10" CornerRadius="10" Background="{StaticResource LightGreenBg}" BorderThickness="1" BorderBrush="#C8E6C9" Cursor="Hand">
                         <uc:VoltimetteUserControl x:Name="UcVoltimette" Margin="8"/>
                     </Border>
 
-                    <Border Margin="10" CornerRadius="10" Background="{StaticResource LightGreenBg}" BorderThickness="1" BorderBrush="#C8E6C9" Cursor="Hand">
+                    <Border x:Name="Border_FlorapfelUserControl" MouseLeftButtonDown="Border_FlorapfelUserControl_MouseLeftButtonDown" Margin="10" CornerRadius="10" Background="{StaticResource LightGreenBg}" BorderThickness="1" BorderBrush="#C8E6C9" Cursor="Hand">
                         <uc:FlorapfelUserControl x:Name="UcFlorapfel" Margin="8"/>
                     </Border>
 
-                    <Border Margin="10" CornerRadius="10" Background="{StaticResource LightGreenBg}" BorderThickness="1" BorderBrush="#C8E6C9" Cursor="Hand">
+                    <Border x:Name="Border_FrostubeUserControl" MouseLeftButtonDown="Border_FrostubeUserControl_MouseLeftButtonDown" Margin="10" CornerRadius="10" Background="{StaticResource LightGreenBg}" BorderThickness="1" BorderBrush="#C8E6C9" Cursor="Hand">
                         <uc:FrostubeUserControl x:Name="UcFrostube" Margin="8"/>
                     </Border>
 
-                    <Border Margin="10" CornerRadius="10" Background="{StaticResource LightGreenBg}" BorderThickness="1" BorderBrush="#C8E6C9" Cursor="Hand">
+                    <Border x:Name="Border_TerrangoUserControl" MouseLeftButtonDown="Border_TerrangoUserControl_MouseLeftButtonDown" Margin="10" CornerRadius="10" Background="{StaticResource LightGreenBg}" BorderThickness="1" BorderBrush="#C8E6C9" Cursor="Hand">
                         <uc:TerrangoUserControl x:Name="UcTerrango" Margin="8"/>
                     </Border>
 
-                    <Border Margin="10" CornerRadius="10" Background="{StaticResource LightGreenBg}" BorderThickness="1" BorderBrush="#C8E6C9" Cursor="Hand">
-                        <uc:WindpfirsichUserControl x:Name="UcWindpfirsich" Margin="8"/>
+                    <Border x:Name="Border_WindpfirsichUserControl" MouseLeftButtonDown="Border_WindpfirsichUserControl_MouseLeftButtonDown" Margin="10" CornerRadius="10" Background="{StaticResource LightGreenBg}" BorderThickness="1" BorderBrush="#C8E6C9" Cursor="Hand">
+                        <uc:WindpfirsichUserControl x:Name="UcWindpfirsich" Margin="8" />
                     </Border>
 
-                    <Border Margin="10" CornerRadius="10" Background="{StaticResource LightGreenBg}" BorderThickness="1" BorderBrush="#C8E6C9" Cursor="Hand">
+                    <Border x:Name="Border_MystikokosUserControl" MouseLeftButtonDown="Border_MystikokosUserControl_MouseLeftButtonDown" Margin="10" CornerRadius="10" Background="{StaticResource LightGreenBg}" BorderThickness="1" BorderBrush="#C8E6C9" Cursor="Hand">
                         <uc:MystikokosUserControl x:Name="UcMystikokos" Margin="8"/>
                     </Border>
 
-                    <Border Margin="10" CornerRadius="10" Background="{StaticResource LightGreenBg}" BorderThickness="1" BorderBrush="#C8E6C9" Cursor="Hand">
+                    <Border x:Name="Border_ToxibirneUserControl" MouseLeftButtonDown="Border_ToxibirneUserControl_MouseLeftButtonDown" Margin="10" CornerRadius="10" Background="{StaticResource LightGreenBg}" BorderThickness="1" BorderBrush="#C8E6C9" Cursor="Hand">
                         <uc:ToxibirneUserControl x:Name="UcToxibirne" Margin="8"/>
                     </Border>
 
-                    <Border Margin="10" CornerRadius="10" Background="{StaticResource LightGreenBg}" BorderThickness="1" BorderBrush="#C8E6C9" Cursor="Hand">
+                    <Border x:Name="Border_KnacknussUserControl" MouseLeftButtonDown="Border_KnacknussUserControl_MouseLeftButtonDown" Margin="10" CornerRadius="10" Background="{StaticResource LightGreenBg}" BorderThickness="1" BorderBrush="#C8E6C9" Cursor="Hand">
                         <uc:KnacknussUserControl x:Name="UcKnacknuss" Margin="8"/>
                     </Border>
 
-                    <Border Margin="10" CornerRadius="10" Background="{StaticResource LightGreenBg}" BorderThickness="1" BorderBrush="#C8E6C9" Cursor="Hand">
+                    <Border x:Name="Border_SchattenfeigeUserControl" MouseLeftButtonDown="Border_SchattenfeigeUserControl_MouseLeftButtonDown" Margin="10" CornerRadius="10" Background="{StaticResource LightGreenBg}" BorderThickness="1" BorderBrush="#C8E6C9" Cursor="Hand">
                         <uc:SchattenfeigeUserControl x:Name="UcSchattenfeige" Margin="8"/>
                     </Border>
 
-                    <Border Margin="10" CornerRadius="10" Background="{StaticResource LightGreenBg}" BorderThickness="1" BorderBrush="#C8E6C9" Cursor="Hand">
+                    <Border x:Name="Broder_GlanzkirscheUserControl" MouseLeftButtonDown="Broder_GlanzkirscheUserControl_MouseLeftButtonDown" Margin="10" CornerRadius="10" Background="{StaticResource LightGreenBg}" BorderThickness="1" BorderBrush="#C8E6C9" Cursor="Hand">
                         <uc:GlanzkirscheUserControl x:Name="UcGlanzkirsche" Margin="8"/>
                     </Border>
 
@@ -136,7 +135,7 @@
 
         <Grid Grid.Row="2" Margin="0,20,0,0">
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
-                <Button x:Name="BtnHinzufuegen" Content="Hinzufügen" Style="{StaticResource ModernButtonStyle}" Margin="0,0,15,0">
+                <Button x:Name="BtnHinzufuegen" Content="Hinzufügen" Style="{StaticResource ModernButtonStyle}" Margin="0,0,15,0" Click="BtnHinzufuegen_Click">
                     <Button.Resources>
                         <Style TargetType="Border">
                             <Setter Property="CornerRadius" Value="8"/>
@@ -144,7 +143,7 @@
                     </Button.Resources>
                 </Button>
 
-                <Button x:Name="BtnLoeschen" Content="Löschen" Style="{StaticResource DeleteButtonStyle}">
+                <Button x:Name="BtnLoeschen" Content="Löschen" Style="{StaticResource DeleteButtonStyle}" Click="BtnLoeschen_Click">
                     <Button.Resources>
                         <Style TargetType="Border">
                             <Setter Property="CornerRadius" Value="8"/>
@@ -153,7 +152,7 @@
                 </Button>
             </StackPanel>
 
-            <Button x:Name="BtnBeenden" Content="Beenden" Style="{StaticResource ExitButtonStyle}" HorizontalAlignment="Right">
+            <Button x:Name="BtnBeenden" Content="Beenden" Style="{StaticResource ExitButtonStyle}" HorizontalAlignment="Right" Click="BtnBeenden_Click">
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="8"/>

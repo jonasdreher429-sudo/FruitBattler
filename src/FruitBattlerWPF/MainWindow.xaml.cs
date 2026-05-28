@@ -1,5 +1,6 @@
 ﻿using FruitBattlerWPF.Classes;
 using FruitBattlerWPF.Pages;
+using FruitBattlerWPF.Pages_window;
 using System.ComponentModel;
 using System.Text;
 using System.Windows;
@@ -34,14 +35,15 @@ namespace FruitBattlerWPF
 
         private void ButtonStart_Click(object sender, RoutedEventArgs e)
         {
-
+            
         }
 
 
 
         private void ButtonTeamBuilder_Click(object sender, RoutedEventArgs e)
         {
-
+            TeamBuilderWindow teamBuilderWindow = new TeamBuilderWindow(allfruits);
+            teamBuilderWindow.ShowDialog();
         }
 
 
