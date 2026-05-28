@@ -1,0 +1,165 @@
+﻿<Window x:Class="FruitBattlerWPF.Pages_window.TeamBuilderWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FruitBattlerWPF.Pages_window"
+        xmlns:uc="clr-namespace:FruitBattlerWPF.UserControls" 
+        mc:Ignorable="d"
+        Title="Fruit Battler - Team Builder" Height="750" Width="950"
+        WindowStartupLocation="CenterScreen" Background="#F4F9F4">
+
+    <Window.Resources>
+        <SolidColorBrush x:Key="PrimaryGreen" Color="#2ECC71"/>
+        <SolidColorBrush x:Key="LightGreenBg" Color="#E8F5E9"/>
+        <SolidColorBrush x:Key="DarkGreenText" Color="#1E4620"/>
+        <SolidColorBrush x:Key="AccentGreen" Color="#A3E4D7"/>
+        <SolidColorBrush x:Key="DeleteRed" Color="#E74C3C"/>
+
+        <Style x:Key="ModernButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="{StaticResource PrimaryGreen}"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Padding" Value="25,12"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#27AE60"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style x:Key="DeleteButtonStyle" TargetType="Button" BasedOn="{StaticResource ModernButtonStyle}">
+            <Setter Property="Background" Value="{StaticResource DeleteRed}"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#C0392B"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style x:Key="ExitButtonStyle" TargetType="Button" BasedOn="{StaticResource ModernButtonStyle}">
+            <Setter Property="Background" Value="#7F8C8D"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#95A5A6"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+
+    <Grid Margin="25">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Margin="0,0,0,20">
+            <TextBlock Text="TEAM BUILDER" 
+                       FontSize="30" 
+                       FontWeight="Black" 
+                       Foreground="{StaticResource DarkGreenText}"/>
+            <TextBlock Text="Wähle deine Früchte aus und erstelle dein Kampf-Team!" 
+                       FontSize="14" 
+                       Foreground="#7F8C8D" 
+                       Margin="0,5,0,0"/>
+            <Separator Background="{StaticResource PrimaryGreen}" Margin="0,12,0,0" Height="2"/>
+        </StackPanel>
+
+        <Border Grid.Row="1" 
+                Background="White" 
+                CornerRadius="15" 
+                Padding="15"
+                BorderBrush="{StaticResource AccentGreen}"
+                BorderThickness="1">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="15" Direction="270" ShadowDepth="2" Opacity="0.05"/>
+            </Border.Effect>
+
+            <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+                <WrapPanel HorizontalAlignment="Center" ItemWidth="190" ItemHeight="230">
+
+                    <Border Margin="10" CornerRadius="10" Background="{StaticResource LightGreenBg}" BorderThickness="1" BorderBrush="#C8E6C9" Cursor="Hand">
+                        <uc:PyronanaUserControl x:Name="UcPyronana" Margin="8"/>
+                    </Border>
+
+                    <Border Margin="10" CornerRadius="10" Background="{StaticResource LightGreenBg}" BorderThickness="1" BorderBrush="#C8E6C9" Cursor="Hand">
+                        <uc:AquabeereUserControl x:Name="UcAquabeere" Margin="8"/>
+                    </Border>
+
+                    <Border Margin="10" CornerRadius="10" Background="{StaticResource LightGreenBg}" BorderThickness="1" BorderBrush="#C8E6C9" Cursor="Hand">
+                        <uc:VoltimetteUserControl x:Name="UcVoltimette" Margin="8"/>
+                    </Border>
+
+                    <Border Margin="10" CornerRadius="10" Background="{StaticResource LightGreenBg}" BorderThickness="1" BorderBrush="#C8E6C9" Cursor="Hand">
+                        <uc:FlorapfelUserControl x:Name="UcFlorapfel" Margin="8"/>
+                    </Border>
+
+                    <Border Margin="10" CornerRadius="10" Background="{StaticResource LightGreenBg}" BorderThickness="1" BorderBrush="#C8E6C9" Cursor="Hand">
+                        <uc:FrostubeUserControl x:Name="UcFrostube" Margin="8"/>
+                    </Border>
+
+                    <Border Margin="10" CornerRadius="10" Background="{StaticResource LightGreenBg}" BorderThickness="1" BorderBrush="#C8E6C9" Cursor="Hand">
+                        <uc:TerrangoUserControl x:Name="UcTerrango" Margin="8"/>
+                    </Border>
+
+                    <Border Margin="10" CornerRadius="10" Background="{StaticResource LightGreenBg}" BorderThickness="1" BorderBrush="#C8E6C9" Cursor="Hand">
+                        <uc:WindpfirsichUserControl x:Name="UcWindpfirsich" Margin="8"/>
+                    </Border>
+
+                    <Border Margin="10" CornerRadius="10" Background="{StaticResource LightGreenBg}" BorderThickness="1" BorderBrush="#C8E6C9" Cursor="Hand">
+                        <uc:MystikokosUserControl x:Name="UcMystikokos" Margin="8"/>
+                    </Border>
+
+                    <Border Margin="10" CornerRadius="10" Background="{StaticResource LightGreenBg}" BorderThickness="1" BorderBrush="#C8E6C9" Cursor="Hand">
+                        <uc:ToxibirneUserControl x:Name="UcToxibirne" Margin="8"/>
+                    </Border>
+
+                    <Border Margin="10" CornerRadius="10" Background="{StaticResource LightGreenBg}" BorderThickness="1" BorderBrush="#C8E6C9" Cursor="Hand">
+                        <uc:KnacknussUserControl x:Name="UcKnacknuss" Margin="8"/>
+                    </Border>
+
+                    <Border Margin="10" CornerRadius="10" Background="{StaticResource LightGreenBg}" BorderThickness="1" BorderBrush="#C8E6C9" Cursor="Hand">
+                        <uc:SchattenfeigeUserControl x:Name="UcSchattenfeige" Margin="8"/>
+                    </Border>
+
+                    <Border Margin="10" CornerRadius="10" Background="{StaticResource LightGreenBg}" BorderThickness="1" BorderBrush="#C8E6C9" Cursor="Hand">
+                        <uc:GlanzkirscheUserControl x:Name="UcGlanzkirsche" Margin="8"/>
+                    </Border>
+
+                </WrapPanel>
+            </ScrollViewer>
+        </Border>
+
+        <Grid Grid.Row="2" Margin="0,20,0,0">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                <Button x:Name="BtnHinzufuegen" Content="Hinzufügen" Style="{StaticResource ModernButtonStyle}" Margin="0,0,15,0">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="8"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+
+                <Button x:Name="BtnLoeschen" Content="Löschen" Style="{StaticResource DeleteButtonStyle}">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="8"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+            </StackPanel>
+
+            <Button x:Name="BtnBeenden" Content="Beenden" Style="{StaticResource ExitButtonStyle}" HorizontalAlignment="Right">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="8"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+        </Grid>
+    </Grid>
+</Window>

@@ -5,7 +5,7 @@
     <Compile Update="Pages_window\GamePage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Pages_window\TeamBuilder.xaml.cs">
+    <Compile Update="Pages_window\TeamBuilderWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="UserControls\AquabeereUserControl.xaml.cs">

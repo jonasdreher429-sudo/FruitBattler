@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace FruitBattlerWPF.Pages_window
 {
     /// <summary>
-    /// Interaktionslogik für TeamBuilder.xaml
+    /// Interaktionslogik für TeamBuilderWindow.xaml
     /// </summary>
-    public partial class TeamBuilder : Window
+    public partial class TeamBuilderWindow : Window
     {
-        public TeamBuilder()
+        public TeamBuilderWindow()
         {
             InitializeComponent();
         }

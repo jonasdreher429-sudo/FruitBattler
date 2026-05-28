@@ -10,7 +10,7 @@ namespace FruitBattlerWPF.Classes
 {
     public class Fruit
     {
-        public string Name;
+        public string Name = string.Empty;
         public Type FruitType;
         public int MaxHP;
         public int CurrentHP;
@@ -19,7 +19,7 @@ namespace FruitBattlerWPF.Classes
         public int Speed;
         public bool IsAlive;
         public Move[] MoveSet;
-        public UserControl FruitControl;
+        public UserControl? FruitControl;
 
 
         public Fruit(string name,Type fruittype,int maxhp,int attack,int deffense, int speed, Move[] moveset, UserControl FruitControl)

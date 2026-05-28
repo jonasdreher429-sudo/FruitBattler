@@ -8,7 +8,7 @@ namespace FruitBattlerWPF
 {
     public enum Type
     {
-        normal,
+        Normal,
         Feuer,
         Wasser,
         Elektro,
