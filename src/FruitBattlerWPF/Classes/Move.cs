@@ -8,11 +8,11 @@ namespace FruitBattlerWPF.Classes
 {
     public class Move
     {
-        public string Name = string.Empty;
-        public Type type;
-        public int Damage;
-        public int Duengercost;
-        public string Description = string.Empty;
+        public string Name { get; set; }  = string.Empty;
+        public Type type { get; set; }
+        public int Damage { get; set; }
+        public int Duengercost { get; set; }
+        public string Description { get; set; } = string.Empty;
 
 
         public Move () { }
