@@ -5,8 +5,8 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:FruitBattlerWPF.UserControls"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-            
-    </Grid>
+            d:DesignHeight="80" d:DesignWidth="80">
+    <Canvas>
+        <Ellipse Width="80" Height="80" Fill="Blue" Margin="0,0,720,370"/>
+    </Canvas>
 </UserControl>
