@@ -10,16 +10,16 @@ namespace FruitBattlerWPF.Classes
 {
     public class Fruit
     {
-        public string Name = string.Empty;
-        public Type FruitType;
-        public int MaxHP;
-        public int CurrentHP;
-        public int Attack;
-        public int Defense;
-        public int Speed;
-        public bool IsAlive;
-        public Move[] MoveSet;
-        public UserControl? FruitControl;
+        public string Name { get; set; } = string.Empty;
+        public Type FruitType { get; set; }
+        public int MaxHP { get; set; }
+        public int CurrentHP{get; set;}
+        public int Attack { get; set; }
+        public int Defense { get; set; }
+        public int Speed { get; set; }
+        public bool IsAlive { get; set; }
+        public Move[] MoveSet { get; set; }
+        public UserControl? FruitControl { get; set; }
 
         public Fruit() { }
 
