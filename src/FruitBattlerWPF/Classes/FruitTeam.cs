@@ -11,6 +11,7 @@ namespace FruitBattlerWPF.Classes
         public Fruit[] Fruits { get; set; }
         public int Active_Fruit_Index = 0;
 
+        public FruitTeam() { }
         public FruitTeam(Fruit[] Fruits)
         {
             this.Fruits = Fruits;

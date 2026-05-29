@@ -1,4 +1,8 @@
-﻿using System.Text;
+﻿using FruitBattlerWPF.Classes;
+using FruitBattlerWPF.Pages;
+using FruitBattlerWPF.Pages_window;
+using System.ComponentModel;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -16,9 +20,40 @@ namespace FruitBattlerWPF
     /// </summary>
     public partial class MainWindow : Window
     {
+        public List<Fruit> allfruits = new List<Fruit>();
         public MainWindow()
         {
             InitializeComponent();
         }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            allfruits = FruitGenerator.CreateAllFruits();
+        }
+
+
+
+        private void ButtonStart_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+
+
+        private void ButtonTeamBuilder_Click(object sender, RoutedEventArgs e)
+        {
+            TeamBuilderWindow teamBuilderWindow = new TeamBuilderWindow(allfruits);
+            teamBuilderWindow.ShowDialog();
+        }
+
+
+
+        private void ButtonExit_Click(object sender, RoutedEventArgs e)
+        {
+            Logger.Information("Program Shutdown");
+            Application.Current.Shutdown();
+        }
+
+       
     }
 }
