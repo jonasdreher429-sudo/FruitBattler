@@ -24,6 +24,7 @@ namespace FruitBattlerWPF.Pages_window
         public Fruit CurrentSeletcted = new Fruit();
         public List<Fruit> TeamList = new List<Fruit>();
         public List<Fruit> allfruits = new List<Fruit>();
+        
 
         public TeamBuilderWindow(List<Fruit> allfruits)
         {
@@ -156,11 +157,32 @@ namespace FruitBattlerWPF.Pages_window
             ChangeBorderColors(sender as Border);
 
         }
+        private void UpdateTextBlockTeam()
+        {
+            if (TeamList == null)
+            {
+                TextBlockTeam.Text = "";
+                return;
+            }
+            string teamtext = string.Empty;
+            int count = 0;
+            foreach (Fruit f in TeamList)
+            {
+                if (count == 0)
+                    teamtext += f.Name;
+                else
+                {
+                    teamtext += $", {f.Name}";
+                }
+                count++;
+            }
+            TextBlockTeam.Text = teamtext;
+        }
 
         private void BtnHinzufuegen_Click(object sender, RoutedEventArgs e)
         {
 
-            if (TeamList.Count >= 4)
+            if (TeamList == null || TeamList.Count >= 4)
             {
                 MessageBox.Show("Es dürfen nur 4 Früchte im Team sein");
                 return;
@@ -175,16 +197,33 @@ namespace FruitBattlerWPF.Pages_window
                 }
             }
             TeamList.Add(CurrentSeletcted);
+            UpdateTextBlockTeam();
         }
 
         private void BtnLoeschen_Click(object sender, RoutedEventArgs e)
         {
             TeamList.Remove(CurrentSeletcted);
+            UpdateTextBlockTeam();
         }
 
         private void BtnBeenden_Click(object sender, RoutedEventArgs e)
         {
+            if (TeamList.Count < 4)
+            {
+                
+                this.Close();
+                return;
+
+            }
+
+            Save_load.save(TeamList);
             this.Close();
+        }
+
+        private void BtnLoad_Click(object sender, RoutedEventArgs e)
+        {
+            TeamList = Save_load.Load();
+            UpdateTextBlockTeam();
         }
     }
 }
