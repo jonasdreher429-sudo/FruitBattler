@@ -9,9 +9,39 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Fruitpng\Aquabeere.png" />
+    <None Remove="Fruitpng\Florapfel.png" />
+    <None Remove="Fruitpng\Frostube.png" />
+    <None Remove="Fruitpng\Glanzkirsche.png" />
+    <None Remove="Fruitpng\Knacknuss.png" />
+    <None Remove="Fruitpng\Mystikos.png" />
+    <None Remove="Fruitpng\Pyronana.png" />
+    <None Remove="Fruitpng\Schattenfeige.png" />
+    <None Remove="Fruitpng\Terrango.png" />
+    <None Remove="Fruitpng\Toxibirne.png" />
+    <None Remove="Fruitpng\Voltimette.png" />
+    <None Remove="Fruitpng\Windpfirsich.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Serilog" Version="4.3.1" />
     <PackageReference Include="Serilog.Sinks.Console" Version="6.1.1" />
     <PackageReference Include="Serilog.Sinks.File" Version="7.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Fruitpng\Aquabeere.png" />
+    <Resource Include="Fruitpng\Florapfel.png" />
+    <Resource Include="Fruitpng\Frostube.png" />
+    <Resource Include="Fruitpng\Glanzkirsche.png" />
+    <Resource Include="Fruitpng\Knacknuss.png" />
+    <Resource Include="Fruitpng\Mystikos.png" />
+    <Resource Include="Fruitpng\Pyronana.png" />
+    <Resource Include="Fruitpng\Schattenfeige.png" />
+    <Resource Include="Fruitpng\Terrango.png" />
+    <Resource Include="Fruitpng\Toxibirne.png" />
+    <Resource Include="Fruitpng\Voltimette.png" />
+    <Resource Include="Fruitpng\Windpfirsich.png" />
   </ItemGroup>
 
 </Project>

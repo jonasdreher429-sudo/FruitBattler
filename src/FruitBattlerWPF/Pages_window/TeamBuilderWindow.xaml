@@ -48,6 +48,14 @@
                 </Trigger>
             </Style.Triggers>
         </Style>
+
+        <Style x:Key="FruitNameStyle" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="{StaticResource DarkGreenText}"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="Margin" Value="0,10,0,0"/>
+        </Style>
     </Window.Resources>
 
     <Grid Margin="25">
@@ -56,7 +64,6 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-        
 
         <StackPanel Grid.Row="0" Margin="0,0,0,20">
             <TextBlock Text="TEAM BUILDER" 
@@ -69,6 +76,13 @@
                        Margin="0,5,0,0"/>
             <Separator Background="{StaticResource PrimaryGreen}" Margin="0,12,0,0" Height="2"/>
         </StackPanel>
+        <Button x:Name="BtnSave" Content="Save" Style="{StaticResource ExitButtonStyle}" HorizontalAlignment="Right" Cursor="Hand" Margin="0,12,164,33" Width="123" Click="BtnSave_Click">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="8"/>
+                </Style>
+            </Button.Resources>
+        </Button>
 
         <Button x:Name="BtnLoad" Content="Load" Click="BtnLoad_Click" Margin="756,12,10,33">
             <Button.Resources>
@@ -80,6 +94,7 @@
                 <StaticResource ResourceKey="ModernButtonStyle"/>
             </Button.Style>
         </Button>
+
         <Border Grid.Row="1" 
                 Background="White" 
                 CornerRadius="15" 
@@ -92,52 +107,161 @@
 
             <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
                 <WrapPanel x:Name="FruitPanel" HorizontalAlignment="Center" ItemWidth="190" ItemHeight="230">
-                    <Border x:Name="Border_PyronanaUserControl" MouseLeftButtonDown="Border_PyronanaUserControl_MouseLeftButtonDown" Margin="10" CornerRadius="10" Background="{StaticResource LightGreenBg}" BorderThickness="1" BorderBrush="#C8E6C9" Cursor="Hand" >
-                        <uc:PyronanaUserControl x:Name="UcPyronana" Margin="8"/>
+
+                    <Border x:Name="Border_PyronanaUserControl" MouseLeftButtonDown="Border_PyronanaUserControl_MouseLeftButtonDown" Margin="10" CornerRadius="10" Background="{StaticResource LightGreenBg}" BorderThickness="1" BorderBrush="#C8E6C9" Cursor="Hand">
+                        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <Grid Width="75" Height="75">
+                                <uc:PyronanaUserControl x:Name="UcPyronana">
+                                    <uc:PyronanaUserControl.LayoutTransform>
+                                        <TranslateTransform X="20" Y="18"/>
+                                    </uc:PyronanaUserControl.LayoutTransform>
+                                </uc:PyronanaUserControl>
+                            </Grid>
+                            <TextBlock Text="Pyronana" Style="{StaticResource FruitNameStyle}"/>
+                        </StackPanel>
                     </Border>
 
                     <Border x:Name="Border_AquabeereUserControl" MouseLeftButtonDown="Border_AquabeereUserControl_MouseLeftButtonDown" Margin="10" CornerRadius="10" Background="{StaticResource LightGreenBg}" BorderThickness="1" BorderBrush="#C8E6C9" Cursor="Hand">
-                        <uc:AquabeereUserControl x:Name="UcAquabeere" Margin="8" Height="195" Width="148"/>
+                        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <Grid Width="75" Height="75">
+                                <uc:AquabeereUserControl x:Name="UcAquabeere">
+                                    <uc:AquabeereUserControl.LayoutTransform>
+                                        <TranslateTransform X="20" Y="18"/>
+                                    </uc:AquabeereUserControl.LayoutTransform>
+                                </uc:AquabeereUserControl>
+                            </Grid>
+                            <TextBlock Text="Aquabeere" Style="{StaticResource FruitNameStyle}"/>
+                        </StackPanel>
                     </Border>
 
                     <Border x:Name="Border_VoltimetteUserControl" MouseLeftButtonDown="Border_VoltimetteUserControl_MouseLeftButtonDown" Margin="10" CornerRadius="10" Background="{StaticResource LightGreenBg}" BorderThickness="1" BorderBrush="#C8E6C9" Cursor="Hand">
-                        <uc:VoltimetteUserControl x:Name="UcVoltimette" Margin="8"/>
+                        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <Grid Width="75" Height="75">
+                                <uc:VoltimetteUserControl x:Name="UcVoltimette">
+                                    <uc:VoltimetteUserControl.LayoutTransform>
+                                        <TranslateTransform X="20" Y="18"/>
+                                    </uc:VoltimetteUserControl.LayoutTransform>
+                                </uc:VoltimetteUserControl>
+                            </Grid>
+                            <TextBlock Text="Voltimette" Style="{StaticResource FruitNameStyle}"/>
+                        </StackPanel>
                     </Border>
 
                     <Border x:Name="Border_FlorapfelUserControl" MouseLeftButtonDown="Border_FlorapfelUserControl_MouseLeftButtonDown" Margin="10" CornerRadius="10" Background="{StaticResource LightGreenBg}" BorderThickness="1" BorderBrush="#C8E6C9" Cursor="Hand">
-                        <uc:FlorapfelUserControl x:Name="UcFlorapfel" Margin="8"/>
+                        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <Grid Width="75" Height="75">
+                                <uc:FlorapfelUserControl x:Name="UcFlorapfel">
+                                    <uc:FlorapfelUserControl.LayoutTransform>
+                                        <TranslateTransform X="20" Y="18"/>
+                                    </uc:FlorapfelUserControl.LayoutTransform>
+                                </uc:FlorapfelUserControl>
+                            </Grid>
+                            <TextBlock Text="Florapfel" Style="{StaticResource FruitNameStyle}"/>
+                        </StackPanel>
                     </Border>
 
                     <Border x:Name="Border_FrostubeUserControl" MouseLeftButtonDown="Border_FrostubeUserControl_MouseLeftButtonDown" Margin="10" CornerRadius="10" Background="{StaticResource LightGreenBg}" BorderThickness="1" BorderBrush="#C8E6C9" Cursor="Hand">
-                        <uc:FrostubeUserControl x:Name="UcFrostube" Margin="8"/>
+                        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <Grid Width="75" Height="75">
+                                <uc:FrostubeUserControl x:Name="UcFrostube">
+                                    <uc:FrostubeUserControl.LayoutTransform>
+                                        <TranslateTransform X="20" Y="18"/>
+                                    </uc:FrostubeUserControl.LayoutTransform>
+                                </uc:FrostubeUserControl>
+                            </Grid>
+                            <TextBlock Text="Frostube" Style="{StaticResource FruitNameStyle}"/>
+                        </StackPanel>
                     </Border>
 
                     <Border x:Name="Border_TerrangoUserControl" MouseLeftButtonDown="Border_TerrangoUserControl_MouseLeftButtonDown" Margin="10" CornerRadius="10" Background="{StaticResource LightGreenBg}" BorderThickness="1" BorderBrush="#C8E6C9" Cursor="Hand">
-                        <uc:TerrangoUserControl x:Name="UcTerrango" Margin="8"/>
+                        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <Grid Width="75" Height="75">
+                                <uc:TerrangoUserControl x:Name="UcTerrango">
+                                    <uc:TerrangoUserControl.LayoutTransform>
+                                        <TranslateTransform X="20" Y="18"/>
+                                    </uc:TerrangoUserControl.LayoutTransform>
+                                </uc:TerrangoUserControl>
+                            </Grid>
+                            <TextBlock Text="Terrango" Style="{StaticResource FruitNameStyle}"/>
+                        </StackPanel>
                     </Border>
 
                     <Border x:Name="Border_WindpfirsichUserControl" MouseLeftButtonDown="Border_WindpfirsichUserControl_MouseLeftButtonDown" Margin="10" CornerRadius="10" Background="{StaticResource LightGreenBg}" BorderThickness="1" BorderBrush="#C8E6C9" Cursor="Hand">
-                        <uc:WindpfirsichUserControl x:Name="UcWindpfirsich" Margin="8" />
+                        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <Grid Width="75" Height="75">
+                                <uc:WindpfirsichUserControl x:Name="UcWindpfirsich">
+                                    <uc:WindpfirsichUserControl.LayoutTransform>
+                                        <TranslateTransform X="20" Y="18"/>
+                                    </uc:WindpfirsichUserControl.LayoutTransform>
+                                </uc:WindpfirsichUserControl>
+                            </Grid>
+                            <TextBlock Text="Windpfirsich" Style="{StaticResource FruitNameStyle}"/>
+                        </StackPanel>
                     </Border>
 
                     <Border x:Name="Border_MystikokosUserControl" MouseLeftButtonDown="Border_MystikokosUserControl_MouseLeftButtonDown" Margin="10" CornerRadius="10" Background="{StaticResource LightGreenBg}" BorderThickness="1" BorderBrush="#C8E6C9" Cursor="Hand">
-                        <uc:MystikokosUserControl x:Name="UcMystikokos" Margin="8"/>
+                        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <Grid Width="75" Height="75">
+                                <uc:MystikokosUserControl x:Name="UcMystikokos">
+                                    <uc:MystikokosUserControl.LayoutTransform>
+                                        <TranslateTransform X="20" Y="18"/>
+                                    </uc:MystikokosUserControl.LayoutTransform>
+                                </uc:MystikokosUserControl>
+                            </Grid>
+                            <TextBlock Text="Mystikokos" Style="{StaticResource FruitNameStyle}"/>
+                        </StackPanel>
                     </Border>
 
                     <Border x:Name="Border_ToxibirneUserControl" MouseLeftButtonDown="Border_ToxibirneUserControl_MouseLeftButtonDown" Margin="10" CornerRadius="10" Background="{StaticResource LightGreenBg}" BorderThickness="1" BorderBrush="#C8E6C9" Cursor="Hand">
-                        <uc:ToxibirneUserControl x:Name="UcToxibirne" Margin="8"/>
+                        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <Grid Width="75" Height="75">
+                                <uc:ToxibirneUserControl x:Name="UcToxibirne">
+                                    <uc:ToxibirneUserControl.LayoutTransform>
+                                        <TranslateTransform X="20" Y="18"/>
+                                    </uc:ToxibirneUserControl.LayoutTransform>
+                                </uc:ToxibirneUserControl>
+                            </Grid>
+                            <TextBlock Text="Toxibirne" Style="{StaticResource FruitNameStyle}"/>
+                        </StackPanel>
                     </Border>
 
                     <Border x:Name="Border_KnacknussUserControl" MouseLeftButtonDown="Border_KnacknussUserControl_MouseLeftButtonDown" Margin="10" CornerRadius="10" Background="{StaticResource LightGreenBg}" BorderThickness="1" BorderBrush="#C8E6C9" Cursor="Hand">
-                        <uc:KnacknussUserControl x:Name="UcKnacknuss" Margin="8"/>
+                        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <Grid Width="75" Height="75">
+                                <uc:KnacknussUserControl x:Name="UcKnacknuss">
+                                    <uc:KnacknussUserControl.LayoutTransform>
+                                        <TranslateTransform X="20" Y="18"/>
+                                    </uc:KnacknussUserControl.LayoutTransform>
+                                </uc:KnacknussUserControl>
+                            </Grid>
+                            <TextBlock Text="Knacknuss" Style="{StaticResource FruitNameStyle}"/>
+                        </StackPanel>
                     </Border>
 
                     <Border x:Name="Border_SchattenfeigeUserControl" MouseLeftButtonDown="Border_SchattenfeigeUserControl_MouseLeftButtonDown" Margin="10" CornerRadius="10" Background="{StaticResource LightGreenBg}" BorderThickness="1" BorderBrush="#C8E6C9" Cursor="Hand">
-                        <uc:SchattenfeigeUserControl x:Name="UcSchattenfeige" Margin="8"/>
+                        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <Grid Width="75" Height="75">
+                                <uc:SchattenfeigeUserControl x:Name="UcSchattenfeige">
+                                    <uc:SchattenfeigeUserControl.LayoutTransform>
+                                        <TranslateTransform X="20" Y="18"/>
+                                    </uc:SchattenfeigeUserControl.LayoutTransform>
+                                </uc:SchattenfeigeUserControl>
+                            </Grid>
+                            <TextBlock Text="Schattenfeige" Style="{StaticResource FruitNameStyle}"/>
+                        </StackPanel>
                     </Border>
 
                     <Border x:Name="Broder_GlanzkirscheUserControl" MouseLeftButtonDown="Broder_GlanzkirscheUserControl_MouseLeftButtonDown" Margin="10" CornerRadius="10" Background="{StaticResource LightGreenBg}" BorderThickness="1" BorderBrush="#C8E6C9" Cursor="Hand">
-                        <uc:GlanzkirscheUserControl x:Name="UcGlanzkirsche" Margin="8"/>
+                        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <Grid Width="75" Height="75">
+                                <uc:GlanzkirscheUserControl x:Name="UcGlanzkirsche">
+                                    <uc:GlanzkirscheUserControl.LayoutTransform>
+                                        <TranslateTransform X="20" Y="18"/>
+                                    </uc:GlanzkirscheUserControl.LayoutTransform>
+                                </uc:GlanzkirscheUserControl>
+                            </Grid>
+                            <TextBlock Text="Glanzkirsche" Style="{StaticResource FruitNameStyle}"/>
+                        </StackPanel>
                     </Border>
 
                 </WrapPanel>
@@ -161,17 +285,17 @@
                         </Style>
                     </Button.Resources>
                 </Button>
-                <TextBlock Text=""             
-                Name ="TextBlockTeam"
-                FontSize="20" 
-                FontWeight="Black" 
-                Margin="20 0 20 0"
-                Foreground="{StaticResource DarkGreenText}"/>
-                
+                <TextBlock Text=""              
+                           Name="TextBlockTeam"
+                           FontSize="20" 
+                           FontWeight="Black" 
+                           Margin="20,0,20,0"
+                           Foreground="{StaticResource DarkGreenText}"
+                           VerticalAlignment="Center"/>
             </StackPanel>
-            
 
-            <Button x:Name="BtnBeenden" Content="Save/Exit" Style="{StaticResource ExitButtonStyle}" HorizontalAlignment="Right" Click="BtnBeenden_Click">
+
+            <Button x:Name="BtnBeenden" Content="Exit" Style="{StaticResource ExitButtonStyle}" HorizontalAlignment="Right" Click="BtnBeenden_Click" Cursor="Hand">
                 <Button.Resources>
                     <Style TargetType="Border">
                         <Setter Property="CornerRadius" Value="8"/>
