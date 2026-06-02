@@ -240,13 +240,16 @@ namespace FruitBattlerWPF.Pages_window
         private void BtnLoad_Click(object sender, RoutedEventArgs e)
         {
             TeamList = Save_load.Load();
+            if (TeamList == null)
+            {
+                TeamList = new List<Fruit>();
+            }
             UpdateTextBlockTeam();
         }
 
         private void BtnSave_Click(object sender, RoutedEventArgs e)
         {
             Save_load.save(TeamList);
-            this.Close();
         }
     }
 }
