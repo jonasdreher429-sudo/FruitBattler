@@ -22,6 +22,7 @@ namespace FruitBattlerWPF
     {
         public List<Fruit> allfruits = new List<Fruit>();
         public FruitTeam UsingTeam;
+        public EnemyKI enemy = new EnemyKI();
         public MainWindow()
         {
             InitializeComponent();
@@ -42,7 +43,7 @@ namespace FruitBattlerWPF
                 MessageBox.Show("Kein vollständiges Team ausgewählt bitte öffne den TeamBuilder");
                 return;
             }
-            EnemyKI enemy = new EnemyKI();
+            
             enemy.CreateRandomTeam(allfruits);
             
         }
