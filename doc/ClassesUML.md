@@ -17,7 +17,7 @@ und formatiere es für markdown
 | `+`          | `FruitTeam` | `PlayerTeam`          |
 | `+`          | `FruitTeam` | `EnemyTeam`           |
 | `+`          | `Fruit`     | `CurrentPlayerFruit`  |
-| `+`          | `Fruit`     | `CurrentEnemyFruit`   |
+| `+`          | `Fruit`     | `CurrentEnemyFruit`        |
 | `+`          | `bool`      | `IsGameOver`          |
 
 ### Methoden
@@ -29,8 +29,7 @@ und formatiere es für markdown
 * `HandleFaint()`
 * `SwitchFruit()`
 * `GetNextDungerValue() : int`
-* `CheckWinCondition() : bool`
-* `EndGame()`
+
 
 ---
 
