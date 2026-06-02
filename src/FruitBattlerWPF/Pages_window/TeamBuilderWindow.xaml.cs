@@ -202,7 +202,18 @@ namespace FruitBattlerWPF.Pages_window
 
         private void BtnLoeschen_Click(object sender, RoutedEventArgs e)
         {
-            TeamList.Remove(CurrentSeletcted);
+            if (CurrentSeletcted == null || TeamList == null || TeamList.Count == 0)
+                return;
+
+            Fruit Delme = new Fruit();
+            foreach (Fruit f in TeamList)
+            {
+                if (f.Name == CurrentSeletcted.Name)
+                {
+                    Delme = f;
+                }
+            }
+            TeamList.Remove(Delme);
             UpdateTextBlockTeam();
         }
 
@@ -211,19 +222,31 @@ namespace FruitBattlerWPF.Pages_window
             if (TeamList.Count < 4)
             {
                 
+                
+               
+                MessageBox.Show("Team unvollständig");
+                this.DialogResult = false;
                 this.Close();
                 return;
 
             }
 
-            Save_load.save(TeamList);
+            this.DialogResult = true;
             this.Close();
+
+            
         }
 
         private void BtnLoad_Click(object sender, RoutedEventArgs e)
         {
             TeamList = Save_load.Load();
             UpdateTextBlockTeam();
+        }
+
+        private void BtnSave_Click(object sender, RoutedEventArgs e)
+        {
+            Save_load.save(TeamList);
+            this.Close();
         }
     }
 }

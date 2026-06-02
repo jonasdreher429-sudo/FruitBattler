@@ -21,6 +21,7 @@ namespace FruitBattlerWPF
     public partial class MainWindow : Window
     {
         public List<Fruit> allfruits = new List<Fruit>();
+        public List<Fruit> UsingTeam;
         public MainWindow()
         {
             InitializeComponent();
@@ -35,7 +36,12 @@ namespace FruitBattlerWPF
 
         private void ButtonStart_Click(object sender, RoutedEventArgs e)
         {
-            
+            // Abchecken ob Team vorhanden
+            if(UsingTeam  == null || UsingTeam.Count < 4)
+            {
+                MessageBox.Show("Kein vollständiges Team ausgewählt bitte öffne den TeamBuilder");
+                return;
+            }
         }
 
 
@@ -43,7 +49,12 @@ namespace FruitBattlerWPF
         private void ButtonTeamBuilder_Click(object sender, RoutedEventArgs e)
         {
             TeamBuilderWindow teamBuilderWindow = new TeamBuilderWindow(allfruits);
-            teamBuilderWindow.ShowDialog();
+            bool? result = teamBuilderWindow.ShowDialog();
+            if (result == true)
+            {
+                UsingTeam = teamBuilderWindow.TeamList;
+                // Team aus Team Builder ausgewählt und in Variable Using Team gespeichert
+            }
         }
 
 

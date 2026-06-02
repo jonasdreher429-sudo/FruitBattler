@@ -7,6 +7,6 @@
              mc:Ignorable="d" 
              d:DesignHeight="80" d:DesignWidth="80">
     <Canvas>
-        <Ellipse Width="80" Height="80" Fill="LightBlue" Margin="0,0,720,370"/>
+        <Image Source="/Fruitpng/Windpfirsich.png" Canvas.Left="-40" Canvas.Top="-36" Height="147" Width="154"></Image>
     </Canvas>
 </UserControl>
