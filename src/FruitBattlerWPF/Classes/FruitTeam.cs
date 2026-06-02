@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace FruitBattlerWPF.Classes
 {
-    class FruitTeam
+    public class FruitTeam
     {
-        public Fruit[] Fruits { get; set; }
+        public List<Fruit> Fruits { get; set; }
         public int Active_Fruit_Index = 0;
 
         public FruitTeam() { }
-        public FruitTeam(Fruit[] Fruits)
+        public FruitTeam(List<Fruit> Fruits)
         {
             this.Fruits = Fruits;
         }

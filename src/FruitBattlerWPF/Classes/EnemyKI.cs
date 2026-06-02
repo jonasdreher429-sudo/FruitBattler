@@ -11,10 +11,36 @@ namespace FruitBattlerWPF.Classes
         public FruitTeam EnemyTeam;
         public int EnemyDuenger;
 
-        public EnemyKI(FruitTeam EnemyTeam, int enemyDuenger)
+        public EnemyKI() { }
+        public EnemyKI(int enemyDuenger)
         {
-            this.EnemyTeam = EnemyTeam;
             EnemyDuenger = enemyDuenger;
+        }
+
+        public void CreateRandomTeam(List<Fruit> allfruits)
+        {
+            EnemyTeam.Fruits.Clear();
+
+            
+            while (EnemyTeam.Fruits.Count < 4)
+            {
+                int randomFruchtIndex = Random.Shared.Next(0, 12);
+                Fruit zufallsFrucht = allfruits[randomFruchtIndex];
+
+                // KI: Gemini 
+                // Prompt: (Alter code für die funktion)
+                // verbessere nichts würde dieser loop funktionieren um ein komplett unterschiedliches Team zu erstellen
+                // KI Start
+                bool gibtsSchon = EnemyTeam.Fruits.Any(f => f.Name == zufallsFrucht.Name);
+                // KI Ende
+                if (!gibtsSchon)
+                {
+                    EnemyTeam.Fruits.Add(zufallsFrucht);
+                }
+
+                
+            }
+
         }
 
         public int ChooseMove(FruitTeam PlayerTeam)
