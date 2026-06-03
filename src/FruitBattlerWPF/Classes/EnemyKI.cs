@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FruitBattlerWPF.Classes
 {
-    class EnemyKI
+    public class EnemyKI
     {
         public FruitTeam EnemyTeam;
         public int EnemyDuenger;
