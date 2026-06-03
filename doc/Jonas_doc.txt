@@ -16,5 +16,30 @@
 
 26.5
 	Deleted TypeEffectinies file because we already run the calcs in the Fruit Receive Damage
-	
 	Implemted FruitTeam
+	Wrote all methods for the GameHandler but have to prgramm EnemyKi first
+	Reastablished TypeEffective and programmed it with ChatGPT
+	programmed the EnemyKi
+	
+
+27.5
+	added all the ellipses for the prototyp usercontrols
+	
+
+28.5
+	Alle früchte werden geladen
+	TeamBuilderUi fertig
+	Fixed corrupted usercontrols
+	TeamBuilder fertig Implementierd es muss nurnoch speichern und laden programmiert werden das er komplett funktioniert
+
+
+2.6
+	Made all the Backgrounds for the png´s transparent
+	Upgraded the TeamBuilder and made it completly working added the png´s to the usercontrols and made it load into the main window and let the Start Button check if a team is in use
+	Fixed the bug when you load a wrong file that the team builder is messed up
+	Enemy team wird bei start erstellt
+	
+
+
+	
+
