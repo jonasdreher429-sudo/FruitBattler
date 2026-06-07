@@ -12,14 +12,21 @@ namespace FruitBattlerWPF.Classes
     {
         private Canvas GameCanvas;
         private Window CurrentWindow;
-        private Button ButtonSleep = new Button();
-        private Button ButtonAttack1 = new Button();
-        private Button ButtonAttack2 = new Button();
+        public Button ButtonSleep = new Button();
+        public Button ButtonAttack1 = new Button();
+        public Button ButtonAttack2 = new Button();
         private ProgressBar ProgressBarPlayerHealth = new ProgressBar();
         private Label LabelPlayerHealth = new Label();
         private ProgressBar ProgressBarEnemyHealth = new ProgressBar();
         private Label LabelEnemyHealth = new Label();
         private Label LabelDungerCounter = new Label();
+        private Label LabelMoveCost1 = new Label();
+        private Label LabelMoveCost2 = new Label();
+        private Label LabelMoveCost3 = new Label();
+        public Button ButtonSwitch1 = new Button();
+        public Button ButtonSwitch2 = new Button();
+        public Button ButtonSwitch3 = new Button();
+        public Button ButtonSwitch4 = new Button();
 
 
 
@@ -29,7 +36,44 @@ namespace FruitBattlerWPF.Classes
             this.CurrentWindow = window;
         }
 
+        private void AddSwitchButtons()
+        {
+            // Switchbuttons
+            ButtonSwitch1.Content = "1";
+            ButtonSwitch1.Width = 75;
+            ButtonSwitch1.Height = 75;
 
+            ButtonSwitch2.Content = "2";
+            ButtonSwitch2.Width = 75;
+            ButtonSwitch2.Height = 75;
+
+            ButtonSwitch3.Content = "3";
+            ButtonSwitch3.Width = 75;
+            ButtonSwitch3.Height = 75;
+
+            ButtonSwitch4.Content = "4";
+            ButtonSwitch4.Width = 75;
+            ButtonSwitch4.Height = 75;
+
+            // Move SwitchButtons
+            Canvas.SetLeft(ButtonSwitch1, 50);
+            Canvas.SetTop(ButtonSwitch1, 200);
+
+            Canvas.SetLeft(ButtonSwitch2, 50);
+            Canvas.SetTop(ButtonSwitch2, 300);
+
+            Canvas.SetLeft(ButtonSwitch3, 50);
+            Canvas.SetTop(ButtonSwitch3, 400);
+
+            Canvas.SetLeft(ButtonSwitch4, 50);
+            Canvas.SetTop(ButtonSwitch4, 500);
+
+            // Place Switchbuttons on Canvas
+            GameCanvas.Children.Add(ButtonSwitch1);
+            GameCanvas.Children.Add(ButtonSwitch2);
+            GameCanvas.Children.Add(ButtonSwitch3);
+            GameCanvas.Children.Add(ButtonSwitch4);
+        }
         private void AddButtons()
         {
             // Button Width, Height and Default empty content
@@ -55,10 +99,39 @@ namespace FruitBattlerWPF.Classes
             Canvas.SetLeft(ButtonAttack2, 1140);
             Canvas.SetTop(ButtonAttack2, 475);
 
-            // Adding Buttons to Canvas
+            // Labels below Buttons with Default Content "Dünger: 0"
+            LabelMoveCost1.Content = "Dünger: 0";
+            LabelMoveCost1.Width = 100;
+            LabelMoveCost1.Height = 30;
+            
+
+            LabelMoveCost2.Content = "Dünger: 0";
+            LabelMoveCost2.Width = 100;
+            LabelMoveCost2.Height = 30;
+            
+
+            LabelMoveCost3.Content = "Dünger: 0";
+            LabelMoveCost3.Width = 100;
+            LabelMoveCost3.Height = 30;
+            
+            // Moving Labels
+            Canvas.SetLeft(LabelMoveCost1, 840);
+            Canvas.SetTop(LabelMoveCost1, 550);
+
+            Canvas.SetLeft(LabelMoveCost2, 990);
+            Canvas.SetTop(LabelMoveCost2, 550);
+
+            Canvas.SetLeft(LabelMoveCost3, 1140);
+            Canvas.SetTop(LabelMoveCost3, 550);
+
+            // Adding Buttons and Labels to Canvas
             GameCanvas.Children.Add(ButtonSleep);
             GameCanvas.Children.Add(ButtonAttack1);
             GameCanvas.Children.Add(ButtonAttack2);
+
+            GameCanvas.Children.Add(LabelMoveCost1);
+            GameCanvas.Children.Add(LabelMoveCost2);
+            GameCanvas.Children.Add(LabelMoveCost3);
         }
 
 
@@ -104,6 +177,7 @@ namespace FruitBattlerWPF.Classes
             AddButtons();
             AddPlayerHealthBar();
             AddDungerCounter();
+            AddSwitchButtons();
         }
 
         private void AddEnemyHealthBar()
@@ -136,6 +210,7 @@ namespace FruitBattlerWPF.Classes
 
         public void DrawBattleScene()
         {
+            GameCanvas.Children.Clear();
             AddPlayerSection();
             AddEnemySection();
         }
@@ -164,13 +239,6 @@ namespace FruitBattlerWPF.Classes
 
 
 
-        public void SwitchMenuView()
-        {
-            // Add this with the implementation of Pages
-        }
-
-
-
         public void RefreshScreen(int PlayerHP, int PlayerMaxHP, int EnemyHP, int EnemyMaxHP, int NewDungerCount)
         {
             UpdateHPBars(PlayerHP, PlayerMaxHP, EnemyHP, EnemyMaxHP);
@@ -185,6 +253,17 @@ namespace FruitBattlerWPF.Classes
         private void ShowDamageText()
         {
             // Not so important for now
+        }
+
+        public void UpdateMoveButtons(Fruit playerFruit)
+        {
+            ButtonSleep.Content = playerFruit.MoveSet[0].Name;
+            ButtonAttack1.Content = playerFruit.MoveSet[1].Name;
+            ButtonAttack2.Content = playerFruit.MoveSet[2].Name;
+
+            LabelMoveCost1.Content = $"Dünger: {playerFruit.MoveSet[0].Duengercost}";
+            LabelMoveCost2.Content = $"Dünger: {playerFruit.MoveSet[1].Duengercost}";
+            LabelMoveCost3.Content = $"Dünger: {playerFruit.MoveSet[2].Duengercost}";
         }
     }
 }

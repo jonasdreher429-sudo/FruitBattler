@@ -1,8 +1,8 @@
 ﻿using FruitBattlerWPF.Classes;
-using FruitBattlerWPF.Pages;
 using FruitBattlerWPF.Pages_window;
 using System.ComponentModel;
 using System.Text;
+using FruitBattlerWPF.Pages_window;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -45,7 +45,11 @@ namespace FruitBattlerWPF
             }
             
             enemy.CreateRandomTeam(allfruits);
-            
+
+            GameWindow GameWindow = new GameWindow(UsingTeam, enemy.EnemyTeam, enemy);
+            GameWindow.ShowDialog();
+
+
         }
 
 

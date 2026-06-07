@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Controls;
 
 namespace FruitBattlerWPF.Classes
 {
@@ -19,6 +20,7 @@ namespace FruitBattlerWPF.Classes
 
         public void CreateRandomTeam(List<Fruit> allfruits)
         {
+            EnemyTeam = new FruitTeam();
             EnemyTeam.Fruits.Clear();
 
             
@@ -33,12 +35,24 @@ namespace FruitBattlerWPF.Classes
                 // KI Start
                 bool gibtsSchon = EnemyTeam.Fruits.Any(f => f.Name == zufallsFrucht.Name);
                 // KI Ende
+
+                // Claude
                 if (!gibtsSchon)
                 {
-                    EnemyTeam.Fruits.Add(zufallsFrucht);
+                    Fruit klon = new Fruit(
+                        zufallsFrucht.Name,
+                        zufallsFrucht.FruitType,
+                        zufallsFrucht.MaxHP,
+                        zufallsFrucht.Attack,
+                        zufallsFrucht.Defense,
+                        zufallsFrucht.Speed,
+                        zufallsFrucht.MoveSet,
+                        (UserControl)Activator.CreateInstance(zufallsFrucht.FruitControl.GetType())
+                    );
+                    EnemyTeam.Fruits.Add(klon);
                 }
 
-                
+
             }
 
         }
