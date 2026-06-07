@@ -34,6 +34,7 @@ namespace FruitBattlerWPF.Classes
             Speed = speed;
             IsAlive = true;
             MoveSet = moveset;
+            this.FruitControl = FruitControl;
         }
 
 

@@ -11,7 +11,10 @@ namespace FruitBattlerWPF.Classes
         public List<Fruit> Fruits { get; set; }
         public int Active_Fruit_Index = 0;
 
-        public FruitTeam() { }
+        public FruitTeam() 
+        {
+            Fruits = new List<Fruit>();
+        }
         public FruitTeam(List<Fruit> Fruits)
         {
             this.Fruits = Fruits;
