@@ -244,6 +244,31 @@ namespace FruitBattlerWPF.Pages_window
             {
                 TeamList = new List<Fruit>();
             }
+            //KI: Gemini
+            // kontext: Hatte einen fehler beim speichern und laden da usercontrols nicht in json konvertier bar sind
+            // prompt: nun bekomme ich einen fehler wenn ich das team lade und es dann benutzen will da keine usercontrols zugewiesen sind
+            // KI Anfang
+            else
+            {
+                // 2. Die geladenen Früchte reparieren (UserControls wieder zuweisen)
+                foreach (Fruit geladeneFrucht in TeamList)
+                {
+                    // Wir suchen in 'allfruits' nach der Frucht mit demselben Namen
+                    Fruit originaleFrucht = allfruits.FirstOrDefault(f => f.Name == geladeneFrucht.Name);
+
+                    if (originaleFrucht != null)
+                    {
+                        // UI-Element wieder an die geladene Frucht hängen
+                        geladeneFrucht.FruitControl = originaleFrucht.FruitControl;
+
+                        // Falls dein MoveSet oder dein Enum-Typ auch gefehlt hat, 
+                        // kannst du es hier direkt mitsichern:
+                        geladeneFrucht.FruitType = originaleFrucht.FruitType;
+                    }
+                }
+            }
+            // KI: Ende
+
             UpdateTextBlockTeam();
         }
 

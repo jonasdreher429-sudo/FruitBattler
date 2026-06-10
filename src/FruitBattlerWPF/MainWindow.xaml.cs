@@ -43,6 +43,8 @@ namespace FruitBattlerWPF
                 MessageBox.Show("Kein vollständiges Team ausgewählt bitte öffne den TeamBuilder");
                 return;
             }
+
+            
             
             enemy.CreateRandomTeam(allfruits);
 
