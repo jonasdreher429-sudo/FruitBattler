@@ -3,6 +3,8 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -94,7 +96,6 @@ namespace FruitBattlerWPF.Pages_window
                 return;
             }
 
-            GameHandler.SwitchFruit(GameHandler.CurrentPlayerTeam, index);
 
             // Claude Prompt: Wie wechsle ich die usercontrol der frucht am besten?
 
@@ -107,6 +108,7 @@ namespace FruitBattlerWPF.Pages_window
 
             // Neues FruitControl adden
             newFruit.FruitControl.RenderTransform = new ScaleTransform(5.0, 5.0);
+            newFruit.FruitControl.IsHitTestVisible = false;
             Canvas.SetLeft(newFruit.FruitControl, 200);
             Canvas.SetTop(newFruit.FruitControl, 300);
             GameCanvas.Children.Add(newFruit.FruitControl);
@@ -115,6 +117,9 @@ namespace FruitBattlerWPF.Pages_window
 
             RefreshUI();
             // Claude Ende
+
+            EnemyAttack();
+            CheckIfPLayerLost();
 
         }
 
@@ -132,7 +137,30 @@ namespace FruitBattlerWPF.Pages_window
         {
             ExecutePlayerMove(2);
         }
+        private void EnemyAttack()
+        {
+            // Enemy Attack
+            EnemyKI.EnemyDuenger = GameHandler.CurrentDungerEnemy;
+            int enemyMoveIndex = EnemyKI.ChooseMove(GameHandler.CurrentPlayerTeam);
+            Move enemyMove = GameHandler.CurrentEnemyFruit.MoveSet[enemyMoveIndex];
+            GameHandler.CurrentDungerEnemy -= enemyMove.Duengercost;
+            GameHandler.ApplyMove(GameHandler.CurrentEnemyFruit, GameHandler.CurrentPlayerFruit, enemyMove);
+            RefreshUI();
+        }
 
+        private void CheckIfPLayerLost()
+        {
+            if (GameHandler.IsGameOver)
+            {
+                MessageBox.Show("Du hast verloren!");
+                this.Close();
+                return;
+            }
+
+            // New Round and Give dünger
+            GameHandler.NextRound();
+            RefreshUI();
+        }
         private void ExecutePlayerMove(int moveIndex)
         {
             Fruit player = GameHandler.CurrentPlayerFruit;
@@ -158,25 +186,18 @@ namespace FruitBattlerWPF.Pages_window
                 return;
             }
 
-            // Enemy Attack
-            EnemyKI.EnemyDuenger = GameHandler.CurrentDungerEnemy;
-            int enemyMoveIndex = EnemyKI.ChooseMove(GameHandler.CurrentPlayerTeam);
-            Move enemyMove = GameHandler.CurrentEnemyFruit.MoveSet[enemyMoveIndex];
-            GameHandler.CurrentDungerEnemy -= enemyMove.Duengercost;
-            GameHandler.ApplyMove(GameHandler.CurrentEnemyFruit, GameHandler.CurrentPlayerFruit, enemyMove);
-            RefreshUI();
+            EnemyAttack();
 
-            if (GameHandler.IsGameOver)
-            {
-                MessageBox.Show("Du hast verloren!");
-                this.Close();
-                return;
-            }
+            CheckIfPLayerLost();
 
-            // New Round and Give dünger
-            GameHandler.NextRound();
-            RefreshUI();
+           
+            
+
+            
         }
+       
+
+
         private void PlaceFruitControls()
         {
             Fruit player = GameHandler.CurrentPlayerFruit;
@@ -203,7 +224,12 @@ namespace FruitBattlerWPF.Pages_window
             // Skalierung einstellen (2.0 = doppelt so groß)
             player.FruitControl.RenderTransform = new ScaleTransform(5.0, 5.0);
             enemy.FruitControl.RenderTransform = new ScaleTransform(-5.0, 5.0);
+
+            player.FruitControl.IsHitTestVisible = false;
             // Claude Ende
+
+
+
 
             // Player Fruit Bottom Left where it looks good
             Canvas.SetLeft(player.FruitControl, 200);
