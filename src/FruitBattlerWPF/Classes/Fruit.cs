@@ -5,6 +5,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls;
+using System.Text.Json.Serialization;
+
 
 namespace FruitBattlerWPF.Classes
 {
@@ -19,6 +21,8 @@ namespace FruitBattlerWPF.Classes
         public int Speed { get; set; }
         public bool IsAlive { get; set; }
         public Move[] MoveSet { get; set; }
+
+        [JsonIgnore]
         public UserControl? FruitControl { get; set; }
 
         public Fruit() { }
