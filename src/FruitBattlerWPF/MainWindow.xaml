@@ -209,6 +209,16 @@
                 <Ellipse Width="14" Height="14" Fill="#D6FF8A" Margin="6"/>
             </StackPanel>
         </Grid>
+
+        <!-- KI: Claude -->
+        <!-- Prompt: Frame zum Navigieren zur GamePage hinzufügen, liegt über dem Hauptmenü -->
+        <!-- KI Start -->
+        <Frame x:Name="MainFrame"
+               NavigationUIVisibility="Hidden"
+               Background="#1E3B1E"
+               Panel.ZIndex="10"
+               Visibility="Collapsed"/>
+        <!-- KI Ende -->
     </Grid>
 </Window>
 <!-- Ende -->

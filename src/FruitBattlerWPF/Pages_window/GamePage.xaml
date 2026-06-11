@@ -7,9 +7,11 @@
       mc:Ignorable="d" 
       d:DesignHeight="720" d:DesignWidth="1280"
       Title="GamePage">
-    <Canvas>
-        <Rectangle Height="720" Stroke="White" Fill="White" Width="1280"/>
+    <!-- KI: Claude -->
+    <!-- Prompt: Gib dem Canvas einen Namen damit GameVisualizer darauf zeichnen kann, entferne den weißen Platzhalter-Hintergrund -->
+    <!-- KI Start -->
+    <Canvas x:Name="GameCanvas" Width="1280" Height="720">
         <Button x:Name="ButtonExit" Content="EXIT" Canvas.Left="330" Canvas.Top="165" Click="ButtonExit_Click"/>
-
     </Canvas>
+    <!-- KI Ende -->
 </Page>

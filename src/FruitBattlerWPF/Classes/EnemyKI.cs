@@ -19,7 +19,16 @@ namespace FruitBattlerWPF.Classes
 
         public void CreateRandomTeam(List<Fruit> allfruits)
         {
-            EnemyTeam.Fruits.Clear();
+            // KI: Claude
+            // Prompt: Führe EnemyTeam.Clear() nur aus falls ein Team vorhanden ist, initialisiere EnemyTeam falls null
+            // --- KI Start ---
+            if (EnemyTeam == null)
+                EnemyTeam = new FruitTeam();
+            if (EnemyTeam.Fruits == null)
+                EnemyTeam.Fruits = new List<Fruit>();
+            else if (EnemyTeam.Fruits.Count > 0)
+                EnemyTeam.Fruits.Clear();
+            // --- KI Ende ---
 
             
             while (EnemyTeam.Fruits.Count < 4)

@@ -43,9 +43,15 @@ namespace FruitBattlerWPF
                 MessageBox.Show("Kein vollständiges Team ausgewählt bitte öffne den TeamBuilder");
                 return;
             }
-            
+
             enemy.CreateRandomTeam(allfruits);
-            
+
+            // KI: Claude
+            // Prompt: Navigiere zum GamePage Frame und zeige die BattleScene an
+            // --- KI Start ---
+            MainFrame.Visibility = System.Windows.Visibility.Visible;
+            MainFrame.Navigate(new FruitBattlerWPF.Pages.GamePage(UsingTeam, enemy));
+            // --- KI Ende ---
         }
 
 
