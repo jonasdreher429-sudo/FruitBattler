@@ -36,7 +36,7 @@ namespace FruitBattlerWPF.Pages_window
 
             EnemyKI = enemyKI;
             GameHandler = new GameHandler(playerTeam, enemyTeam);
-            GameVisualizer = new GameVisualizer(GameCanvas, this);
+            GameVisualizer = new GameVisualizer(GameCanvas, this, playerTeam, enemyKI);
 
             GameHandler.StartGame();
             GameVisualizer.DrawBattleScene();
