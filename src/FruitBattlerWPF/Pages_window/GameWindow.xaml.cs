@@ -61,21 +61,53 @@ namespace FruitBattlerWPF.Pages_window
         private void ButtonSwitch1_Click(object sender, RoutedEventArgs e)
         {
             SwitchPlayerFruit(0);
+            GameVisualizer.ButtonSwitch1.BorderBrush = new SolidColorBrush(Color.FromRgb(0xC8, 0xFF, 0x8C));
+            GameVisualizer.ButtonSwitch2.BorderBrush = null;
+            GameVisualizer.ButtonSwitch3.BorderBrush = null;
+            GameVisualizer.ButtonSwitch4.BorderBrush = null;
+
+
         }
 
         private void ButtonSwitch2_Click(object sender, RoutedEventArgs e)
         {
             SwitchPlayerFruit(1);
+            GameVisualizer.ButtonSwitch1.BorderBrush = null;
+            GameVisualizer.ButtonSwitch2.BorderBrush = new SolidColorBrush(Color.FromRgb(0xC8, 0xFF, 0x8C));
+            GameVisualizer.ButtonSwitch3.BorderBrush = null;
+            GameVisualizer.ButtonSwitch4.BorderBrush = null;
         }
 
         private void ButtonSwitch3_Click(object sender, RoutedEventArgs e)
         {
             SwitchPlayerFruit(2);
+            GameVisualizer.ButtonSwitch1.BorderBrush = null;
+            GameVisualizer.ButtonSwitch2.BorderBrush = null;
+            GameVisualizer.ButtonSwitch3.BorderBrush = new SolidColorBrush(Color.FromRgb(0xC8, 0xFF, 0x8C));
+            GameVisualizer.ButtonSwitch4.BorderBrush = null;
         }
 
         private void ButtonSwitch4_Click(object sender, RoutedEventArgs e)
         {
             SwitchPlayerFruit(3);
+            GameVisualizer.ButtonSwitch1.BorderBrush = null;
+            GameVisualizer.ButtonSwitch2.BorderBrush = null;
+            GameVisualizer.ButtonSwitch3.BorderBrush = null;
+            GameVisualizer.ButtonSwitch4.BorderBrush = new SolidColorBrush(Color.FromRgb(0xC8, 0xFF, 0x8C));
+        }
+
+        private void switchButtonUpdate()
+        {
+            Fruit player = GameHandler.CurrentPlayerFruit;
+            Button[] switchButtons = { GameVisualizer.ButtonSwitch1, GameVisualizer.ButtonSwitch2, GameVisualizer.ButtonSwitch3, GameVisualizer.ButtonSwitch4 };
+            foreach (Button button in switchButtons)
+            {
+                if (button.Name == player.Name)
+                {
+                    button.Content = $"{player.Name}\n{player.CurrentHP}/{player.MaxHP} HP";
+
+                }
+            }
         }
 
         private void SwitchPlayerFruit(int index)
@@ -117,8 +149,10 @@ namespace FruitBattlerWPF.Pages_window
 
             RefreshUI();
             // Claude Ende
-
             EnemyAttack();
+
+            switchButtonUpdate();
+
             CheckIfPLayerLost();
 
         }
@@ -161,6 +195,9 @@ namespace FruitBattlerWPF.Pages_window
             GameHandler.NextRound();
             RefreshUI();
         }
+
+        
+
         private void ExecutePlayerMove(int moveIndex)
         {
             Fruit player = GameHandler.CurrentPlayerFruit;
@@ -186,10 +223,13 @@ namespace FruitBattlerWPF.Pages_window
                 return;
             }
 
+            
             EnemyAttack();
 
-            CheckIfPLayerLost();
+            switchButtonUpdate();
 
+            CheckIfPLayerLost();
+            
            
             
 

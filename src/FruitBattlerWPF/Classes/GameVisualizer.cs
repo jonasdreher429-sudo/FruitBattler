@@ -53,6 +53,7 @@ namespace FruitBattlerWPF.Classes
             {
                 Fruit fruit = PlayerTeam.Fruits[i];
                 switchButtons[i].Content = $"{fruit.Name}\n{fruit.CurrentHP}/{fruit.MaxHP} HP";
+                switchButtons[i].Name = fruit.Name;
                 switchButtons[i].Width = 160;
                 switchButtons[i].Height = 55;
                 switchButtons[i].Background = new SolidColorBrush(Color.FromArgb(0xCC, 0x2F, 0x6A, 0x24));
