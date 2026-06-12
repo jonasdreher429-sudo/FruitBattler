@@ -40,6 +40,18 @@
 	Enemy team wird bei start erstellt
 	
 
+3.6
+	Updatet my doc and made enemyKi public
+	Einen bug gefixed welcher beim laden vom Team aufgefallen ist
+	Früchte switchen gefixt
+
+11.6
+	Denn GameVisualizer mit claude code vom aussehen her verbessert
+	
+
+12.6
+	Leben bei den switch Buttons werden nun geupdatet
+
 
 	
 
