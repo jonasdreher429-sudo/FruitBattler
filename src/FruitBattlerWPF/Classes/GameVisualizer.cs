@@ -29,6 +29,8 @@ namespace FruitBattlerWPF.Classes
         public Button ButtonSwitch2 = new Button();
         public Button ButtonSwitch3 = new Button();
         public Button ButtonSwitch4 = new Button();
+        private Label LabelPlayerName = new Label();
+        private Label LabelEnemyName = new Label();
 
         // KI: Claude
         // Prompt: Füge FruitTeam und EnemyKI zum Konstruktor hinzu damit Moves, HP und Switch-Buttons mit echten Daten befüllt werden
@@ -133,18 +135,15 @@ namespace FruitBattlerWPF.Classes
             Fruit active = PlayerTeam.GetActiveFruit();
 
             // Fruit name label
-            Label labelName = new Label
-            {
-                Content = active.Name,
-                Foreground = new SolidColorBrush(Color.FromRgb(0xF7, 0xFF, 0xB2)),
-                FontSize = 18,
-                FontWeight = FontWeights.Bold,
-                Width = 300,
-                Height = 30
-            };
-            Canvas.SetLeft(labelName, 830);
-            Canvas.SetTop(labelName, 460);
-            GameCanvas.Children.Add(labelName);
+            LabelPlayerName.Content = active.Name;
+            LabelPlayerName.Foreground = new SolidColorBrush(Color.FromRgb(0xF7, 0xFF, 0xB2));
+            LabelPlayerName.FontSize = 18;
+            LabelPlayerName.FontWeight = FontWeights.Bold;
+            LabelPlayerName.Width = 300;
+            LabelPlayerName.Height = 30;
+            Canvas.SetLeft(LabelPlayerName, 830);
+            Canvas.SetTop(LabelPlayerName, 460);
+            GameCanvas.Children.Add(LabelPlayerName);
 
             ProgressBarPlayerHealth.Width = 300;
             ProgressBarPlayerHealth.Height = 22;
@@ -194,18 +193,16 @@ namespace FruitBattlerWPF.Classes
         {
             Fruit activeEnemy = Enemy.EnemyTeam.GetActiveFruit();
 
-            Label labelEnemyName = new Label
-            {
-                Content = activeEnemy.Name,
-                Foreground = new SolidColorBrush(Color.FromRgb(0xF7, 0xFF, 0xB2)),
-                FontSize = 18,
-                FontWeight = FontWeights.Bold,
-                Width = 300,
-                Height = 30
-            };
-            Canvas.SetLeft(labelEnemyName, 80);
-            Canvas.SetTop(labelEnemyName, 20);
-            GameCanvas.Children.Add(labelEnemyName);
+            LabelEnemyName.Content = activeEnemy.Name;
+            LabelEnemyName.Foreground = new SolidColorBrush(Color.FromRgb(0xF7, 0xFF, 0xB2));
+            LabelEnemyName.FontSize = 18;
+            LabelEnemyName.FontWeight = FontWeights.Bold;
+            LabelEnemyName.Width = 300;
+            LabelEnemyName.Height = 30;
+            
+            Canvas.SetLeft(LabelEnemyName, 80);
+            Canvas.SetTop(LabelEnemyName, 20);
+            GameCanvas.Children.Add(LabelEnemyName);
 
             ProgressBarEnemyHealth.Width = 300;
             ProgressBarEnemyHealth.Height = 22;
@@ -393,6 +390,11 @@ namespace FruitBattlerWPF.Classes
         }
 
 
+        public void UpdateNames(Fruit player, Fruit enemy)
+        {
+            LabelPlayerName.Content = player.Name;
+            LabelEnemyName.Content = enemy.Name;
+        }
 
         public void RefreshScreen(int PlayerHP, int PlayerMaxHP, int EnemyHP, int EnemyMaxHP, int NewDungerCount)
         {
