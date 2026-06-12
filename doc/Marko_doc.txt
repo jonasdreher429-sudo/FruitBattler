@@ -6,10 +6,11 @@
 2.6 - 7.6
 	Fixed System.NullReferenceException for Enemys FruitTeam
 	Added UpdateMoveButtons to GameVisualizer
-	Fixed Bug with Claude where Program would throw Error because Fruit was already instanced after exiting game and re-entering
+	Fixed Bug with Claude where Program would throw Error because Fruit was already instanced after exiting game and re-entering,
 	and where Enemy Fruit couldn't be the same as Player Fruit
 	Added Labels that Show Dünger Cost below the Move Buttons
-	Made a Rough half playable Version of the game, testing most Features with it
+	Made and Implemented GameHandler Class and with it Made a Rough half playable Version of the game,
+	testing most Features with it
 	
 12.06
 	Made it so that if fruit is switched it also switches fruitname
