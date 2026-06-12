@@ -247,6 +247,8 @@ namespace FruitBattlerWPF.Pages_window
             Fruit player = GameHandler.CurrentPlayerFruit;
             Fruit enemy = GameHandler.CurrentEnemyFruit;
 
+            GameVisualizer.UpdateNames(player, enemy);
+
             GameVisualizer.RefreshScreen(player.CurrentHP, player.MaxHP, enemy.CurrentHP, enemy.MaxHP, GameHandler.CurrentDungerPlayer);
             GameVisualizer.UpdateMoveButtons(player);
         }
