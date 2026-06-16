@@ -59,6 +59,7 @@
 	Exit Button im Spiel hinzugefügt
 	Wenn Früchte sterben switchen erzwungen.
 	Animationen erstellt.
+	Sterben von Früchten des Gegners eingebunden das automatisch neue Früchte des Gegner eingewechslet werden.
 
 
 
