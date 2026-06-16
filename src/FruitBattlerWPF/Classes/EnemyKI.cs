@@ -83,28 +83,43 @@ namespace FruitBattlerWPF.Classes
                 }
                 double effectiness = TypeEffective.GetEffectiveness(move.type, PlayerFruit.FruitType);
                 if (move.Duengercost > EnemyDuenger)
+                {
+                    idxcounter++;
                     continue;
+
+                }
                 if (effectiness == 1)
                 {
                     bestmoveidx = idxcounter;
+                    idxcounter++;
+
                     break;
+
                 }
                 if (effectiness == 0)
                 {
                     bestmoveidx = idxcounter;
+                    idxcounter++;
+
                     continue;
+
                 }
                 if (effectiness == -1)
                 {
                     bestmoveidx = idxcounter;
+                    idxcounter++;
+
                     continue;
+
                 }
                 if (effectiness == -2)
                 {
                     bestmoveidx = idxcounter;
+                    idxcounter++;
+
                     continue;
+
                 }
-                idxcounter++;
             }
             if (bestmoveidx == -1)
             {

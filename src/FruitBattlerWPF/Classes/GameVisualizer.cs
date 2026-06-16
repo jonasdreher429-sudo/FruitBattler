@@ -31,6 +31,11 @@ namespace FruitBattlerWPF.Classes
         public Button ButtonSwitch4 = new Button();
         private Label LabelPlayerName = new Label();
         private Label LabelEnemyName = new Label();
+        // KI: Claude
+        // Prompt: Füge oben rechts einen Exit-Button im gleichen Stil wie die anderen Buttons hinzu
+        // --- KI Start ---
+        public Button ButtonExit = new Button();
+        // --- KI Ende ---
 
         // KI: Claude
         // Prompt: Füge FruitTeam und EnemyKI zum Konstruktor hinzu damit Moves, HP und Switch-Buttons mit echten Daten befüllt werden
@@ -230,12 +235,34 @@ namespace FruitBattlerWPF.Classes
             AddEnemyHealthBar();
         }
 
+        // KI: Claude
+        // Prompt: Füge oben rechts einen Exit-Button im gleichen Stil wie die anderen Buttons hinzu
+        // --- KI Start ---
+        private void AddExitButton()
+        {
+            ButtonExit.Content = "Exit";
+            ButtonExit.Width = 90;
+            ButtonExit.Height = 40;
+            ButtonExit.Background = new SolidColorBrush(Color.FromArgb(0xCC, 0x2F, 0x6A, 0x24));
+            ButtonExit.Foreground = new SolidColorBrush(Colors.White);
+            ButtonExit.BorderBrush = new SolidColorBrush(Color.FromRgb(0xC8, 0xFF, 0x8C));
+            ButtonExit.BorderThickness = new Thickness(1);
+            ButtonExit.FontSize = 14;
+
+            Canvas.SetLeft(ButtonExit, CurrentWindow.Width - ButtonExit.Width - 20);
+            Canvas.SetTop(ButtonExit, 20);
+
+            GameCanvas.Children.Add(ButtonExit);
+        }
+        // --- KI Ende ---
+
         public void DrawBattleScene()
         {
             GameCanvas.Children.Clear();
             DrawBackground();
             AddPlayerSection();
             AddEnemySection();
+            AddExitButton();
         }
         // --- KI Ende ---
 
@@ -246,11 +273,28 @@ namespace FruitBattlerWPF.Classes
         // --- KI Start ---
         private void DrawBackground()
         {
+            // KI: Claude
+            // Prompt: Behebe den Bug, dass rechts und unten weiße Streifen zu sehen sind.
+            // Ursache: Hintergrund (sky/ground/vignette) war fix auf 1280x720 gerendert,
+            // das GameWindow ist aber 1400x800 groß -> Canvas war größer als der Hintergrund.
+            // Fix: Hintergrundgröße von der tatsächlichen Fenstergröße ableiten statt sie
+            // hart zu codieren, restliche Layer (sky/ground/vignette) werden proportional
+            // dazu skaliert.
+            // --- KI Start ---
+            double bgWidth = CurrentWindow.Width;
+            double bgHeight = CurrentWindow.Height;
+
+            double skyHeight = bgHeight * (470.0 / 720.0);
+            double groundTop = bgHeight * (440.0 / 720.0);
+            double groundHeight = bgHeight * (280.0 / 720.0);
+            double groundLineTop = bgHeight * (437.0 / 720.0);
+            // --- KI Ende ---
+
             // Sky gradient (top 65%)
             Rectangle sky = new Rectangle
             {
-                Width = 1280,
-                Height = 470
+                Width = bgWidth,
+                Height = skyHeight
             };
             sky.Fill = new LinearGradientBrush(
                 new GradientStopCollection
@@ -266,8 +310,8 @@ namespace FruitBattlerWPF.Classes
             // Ground (bottom 35%)
             Rectangle ground = new Rectangle
             {
-                Width = 1280,
-                Height = 280
+                Width = bgWidth,
+                Height = groundHeight
             };
             ground.Fill = new LinearGradientBrush(
                 new GradientStopCollection
@@ -277,7 +321,7 @@ namespace FruitBattlerWPF.Classes
                 },
                 new Point(0, 0), new Point(0, 1));
             Canvas.SetLeft(ground, 0);
-            Canvas.SetTop(ground, 440);
+            Canvas.SetTop(ground, groundTop);
             GameCanvas.Children.Add(ground);
 
             // Background hills
@@ -312,14 +356,15 @@ namespace FruitBattlerWPF.Classes
             GameCanvas.Children.Add(hillCenter);
 
             // Ground dividing line (bright accent strip)
+            // KI: Claude (Teil desselben Fixes wie oben) - Width/Top jetzt dynamisch statt 1280/437
             Rectangle groundLine = new Rectangle
             {
-                Width = 1280,
+                Width = bgWidth,
                 Height = 6,
                 Fill = new SolidColorBrush(Color.FromArgb(0xAA, 0xC8, 0xFF, 0x8C))
             };
             Canvas.SetLeft(groundLine, 0);
-            Canvas.SetTop(groundLine, 437);
+            Canvas.SetTop(groundLine, groundLineTop);
             GameCanvas.Children.Add(groundLine);
 
             // Decorative clouds
@@ -329,10 +374,11 @@ namespace FruitBattlerWPF.Classes
             AddCloud(1050, 50, 0.65);
 
             // Subtle vignette overlay (dark edges)
+            // KI: Claude (Teil desselben Fixes wie oben) - Width/Height jetzt dynamisch statt 1280/720
             Rectangle vignette = new Rectangle
             {
-                Width = 1280,
-                Height = 720,
+                Width = bgWidth,
+                Height = bgHeight,
                 IsHitTestVisible = false
             };
             RadialGradientBrush vignetteBrush = new RadialGradientBrush();
