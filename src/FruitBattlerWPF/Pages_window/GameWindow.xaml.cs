@@ -56,7 +56,29 @@ namespace FruitBattlerWPF.Pages_window
             GameVisualizer.ButtonSwitch2.Click += ButtonSwitch2_Click;
             GameVisualizer.ButtonSwitch3.Click += ButtonSwitch3_Click;
             GameVisualizer.ButtonSwitch4.Click += ButtonSwitch4_Click;
+
+            
+            GameVisualizer.ButtonExit.Click += ButtonExit_Click;
         }
+
+        
+        private void ButtonExit_Click(object sender, RoutedEventArgs e)
+        {
+            //KI: Claude
+            //Prompt: ist es möglich mit einer message box oder so ein ja oder nein zu machen oder muss ich selber ein window erstellen mit zwei Buttons
+            //KI: Anfang
+            MessageBoxResult result = MessageBox.Show(
+            "Willst du das Spiel wirklich verlassen?",
+            "Beenden",
+            MessageBoxButton.YesNo,
+            MessageBoxImage.Question);
+
+            if (result == MessageBoxResult.Yes)
+            {
+                this.Close();
+            }
+        }
+
 
         private void ButtonSwitch1_Click(object sender, RoutedEventArgs e)
         {
@@ -149,11 +171,19 @@ namespace FruitBattlerWPF.Pages_window
 
             RefreshUI();
             // Claude Ende
-            EnemyAttack();
+
+
+            if (oldFruit.CheckAlive() == true)
+            {
+                EnemyAttack();
+
+            }
 
             switchButtonUpdate();
 
             CheckIfPLayerLost();
+
+            ReEnableButtons();
 
         }
 
@@ -182,21 +212,38 @@ namespace FruitBattlerWPF.Pages_window
             RefreshUI();
         }
 
-        private void CheckIfPLayerLost()
+        private bool CheckIfPLayerLost()
         {
             if (GameHandler.IsGameOver)
             {
                 MessageBox.Show("Du hast verloren!");
                 this.Close();
-                return;
+                return true;
             }
 
             // New Round and Give dünger
             GameHandler.NextRound();
             RefreshUI();
+            return false;
         }
 
         
+
+        private void DisableButtons()
+        {
+            GameVisualizer.ButtonSleep.IsEnabled = false;
+            GameVisualizer.ButtonAttack1.IsEnabled = false;
+            GameVisualizer.ButtonAttack2.IsEnabled = false;
+
+
+        }
+
+        private void ReEnableButtons()
+        {
+            GameVisualizer.ButtonSleep.IsEnabled = true;
+            GameVisualizer.ButtonAttack1.IsEnabled = true;
+            GameVisualizer.ButtonAttack2.IsEnabled = true;
+        }
 
         private void ExecutePlayerMove(int moveIndex)
         {
@@ -225,13 +272,19 @@ namespace FruitBattlerWPF.Pages_window
 
             
             EnemyAttack();
-
             switchButtonUpdate();
 
-            CheckIfPLayerLost();
-            
-           
-            
+            bool loss = CheckIfPLayerLost();
+
+            bool FruitDead = player.CheckAlive();
+            if (FruitDead == false)
+            {
+                DisableButtons();
+                if (loss== false)
+                    MessageBox.Show("Deine Frucht ist gestorben bitte wechsle deine Frucht aus");
+
+            }
+
 
             
         }
