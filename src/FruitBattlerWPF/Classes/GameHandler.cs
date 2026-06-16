@@ -62,11 +62,18 @@ namespace FruitBattlerWPF.Classes
 
             if (!defender.IsAlive)
             {
-                HandleFaint();
+                HandleFaint(defender);
             }
         }
 
-        public void HandleFaint()
+        // KI: Claude
+        // Prompt: Füge hinzu das wenn Früchte vom Gegner sterben neue automatisch eingewechselt werden
+        // --- KI Start ---
+        // HandleFaint bekommt jetzt die gestorbene Frucht übergeben, damit erkannt werden kann,
+        // ob es sich um die aktive Gegner-Frucht handelt. Ist das Spiel nicht vorbei und ist die
+        // gestorbene Frucht die des Gegners, wird automatisch zur nächsten lebenden Frucht im
+        // Gegner-Team gewechselt.
+        public void HandleFaint(Fruit defender)
         {
             if (!CurrentPlayerTeam.HasAliveFruit())
             {
@@ -79,7 +86,14 @@ namespace FruitBattlerWPF.Classes
                 IsGameOver = true;
                 return;
             }
+
+            if (defender == CurrentEnemyFruit)
+            {
+                CurrentEnemyTeam.SwitchToNextAliveFruit();
+                CurrentEnemyFruit = CurrentEnemyTeam.GetActiveFruit();
+            }
         }
+        // --- KI Ende ---
 
         public void SwitchFruit(FruitTeam team, int index)
         {
