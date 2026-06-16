@@ -11,7 +11,7 @@ namespace FruitBattlerWPF.Classes
     {
         public FruitTeam EnemyTeam;
         public int EnemyDuenger;
-
+        
         public EnemyKI() { }
         public EnemyKI(int enemyDuenger)
         {

@@ -40,8 +40,24 @@ namespace FruitBattlerWPF.Classes
             return false;
         }
 
-
-
+        // KI: Claude
+        // Prompt: Füge hinzu das wenn Früchte vom Gegner sterben neue automatisch eingewechselt werden
+        // --- KI Start ---
+        // Sucht die erste lebende Frucht im Team und setzt sie als aktiv.
+        // Wird genutzt, um nach dem Tod der aktiven Frucht automatisch zu wechseln.
+        public bool SwitchToNextAliveFruit()
+        {
+            for (int i = 0; i < Fruits.Count; i++)
+            {
+                if (Fruits[i].IsAlive)
+                {
+                    Active_Fruit_Index = i;
+                    return true;
+                }
+            }
+            return false;
+        }
+        // --- KI Ende ---
 
     }
 }
