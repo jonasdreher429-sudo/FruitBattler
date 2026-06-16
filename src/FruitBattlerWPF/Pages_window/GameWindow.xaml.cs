@@ -161,11 +161,18 @@ namespace FruitBattlerWPF.Pages_window
             GameHandler.SwitchFruit(GameHandler.CurrentPlayerTeam, index);
 
             // Neues FruitControl adden
-            newFruit.FruitControl.RenderTransform = new ScaleTransform(5.0, 5.0);
             newFruit.FruitControl.IsHitTestVisible = false;
             Canvas.SetLeft(newFruit.FruitControl, 200);
             Canvas.SetTop(newFruit.FruitControl, 300);
             GameCanvas.Children.Add(newFruit.FruitControl);
+
+            // KI: Claude
+            // Prompt: Binde die in GameVisualizer programmierte Einwechsel-Animation hier ein
+            // --- KI Start ---
+            // RenderTransform wird jetzt nicht mehr fix gesetzt, sondern von PlaySwitchInAnimation
+            // selbst (startet bei Scale 0 und animiert auf 5.0/5.0 hoch)
+            GameVisualizer.PlaySwitchInAnimation(newFruit.FruitControl, 5.0, 5.0);
+            // --- KI Ende ---
 
             RefreshUI();
 
@@ -208,7 +215,19 @@ namespace FruitBattlerWPF.Pages_window
             int enemyMoveIndex = EnemyKI.ChooseMove(GameHandler.CurrentPlayerTeam);
             Move enemyMove = GameHandler.CurrentEnemyFruit.MoveSet[enemyMoveIndex];
             GameHandler.CurrentDungerEnemy -= enemyMove.Duengercost;
+
+            // KI: Claude
+            // Prompt: Binde die in GameVisualizer programmierte Schadenszahlen-Animation hier ein.
+            // HP vorher/nachher vergleichen, da Move.Damage nur der Basiswert ist und nicht der
+            // tatsächliche Schaden nach der Formel in Fruit.ReceiveDamage
+            // --- KI Start ---
+            int playerHpBefore = GameHandler.CurrentPlayerFruit.CurrentHP;
             GameHandler.ApplyMove(GameHandler.CurrentEnemyFruit, GameHandler.CurrentPlayerFruit, enemyMove);
+            int damageDealt = playerHpBefore - GameHandler.CurrentPlayerFruit.CurrentHP;
+            if (damageDealt > 0)
+                GameVisualizer.ShowDamageText(damageDealt, true);
+            // --- KI Ende ---
+
             RefreshUI();
         }
 
@@ -260,7 +279,19 @@ namespace FruitBattlerWPF.Pages_window
 
             // Player Attack
             GameHandler.CurrentDungerPlayer -= move.Duengercost;
+
+            // KI: Claude
+            // Prompt: Binde die in GameVisualizer programmierte Schadenszahlen-Animation hier ein.
+            // HP vorher/nachher vergleichen, da Move.Damage nur der Basiswert ist und nicht der
+            // tatsächliche Schaden nach der Formel in Fruit.ReceiveDamage
+            // --- KI Start ---
+            int enemyHpBefore = enemy.CurrentHP;
             GameHandler.ApplyMove(player, enemy, move);
+            int damageDealt = enemyHpBefore - enemy.CurrentHP;
+            if (damageDealt > 0)
+                GameVisualizer.ShowDamageText(damageDealt, false);
+            // --- KI Ende ---
+
             RefreshUI();
 
             if (GameHandler.IsGameOver)
