@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
+using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 
 namespace FruitBattlerWPF.Classes
@@ -420,13 +421,36 @@ namespace FruitBattlerWPF.Classes
             // Changing HP Bar Values
             ProgressBarPlayerHealth.Maximum = PlayerMaxHP;
             ProgressBarEnemyHealth.Maximum = EnemyMaxHP;
-            ProgressBarPlayerHealth.Value = PlayerHP;
-            ProgressBarEnemyHealth.Value = EnemyHP;
+
+            // KI: Claude
+            // Prompt: Die Healthbar soll nach erhaltenem Schaden nicht sofort auf den neuen Wert springen,
+            // sondern langsam (animiert) runtergehen
+            // --- KI Start ---
+            AnimateHealthBarValue(ProgressBarPlayerHealth, PlayerHP);
+            AnimateHealthBarValue(ProgressBarEnemyHealth, EnemyHP);
+            // --- KI Ende ---
 
             // Changing Labels
             LabelPlayerHealth.Content = $"{PlayerHP}/{PlayerMaxHP}";
             LabelEnemyHealth.Content = $"{EnemyHP}/{EnemyMaxHP}";
         }
+
+        // KI: Claude
+        // Prompt: Erstelle eine Methode, die den Value einer ProgressBar (Healthbar) nicht direkt setzt,
+        // sondern langsam (mit Animation) zum neuen Wert hin verändert
+        // --- KI Start ---
+        private void AnimateHealthBarValue(ProgressBar healthBar, double newValue)
+        {
+            DoubleAnimation animation = new DoubleAnimation
+            {
+                To = newValue,
+                Duration = TimeSpan.FromSeconds(0.6),
+                EasingFunction = new QuadraticEase { EasingMode = EasingMode.EaseOut }
+            };
+
+            healthBar.BeginAnimation(ProgressBar.ValueProperty, animation);
+        }
+        // --- KI Ende ---
 
 
 
@@ -453,10 +477,97 @@ namespace FruitBattlerWPF.Classes
             // Not so important for now
         }
 
-        private void ShowDamageText()
+        // KI: Claude
+        // Prompt: Erstelle eine Methode die eine Schadenszahl über der Healthbar (Spieler oder Gegner)
+        // einblendet, nach oben schweben lässt und dabei langsam ausblendet. Danach soll sie wieder
+        // vom Canvas entfernt werden, damit sich keine alten Texte ansammeln
+        // --- KI Start ---
+        public void ShowDamageText(int damage, bool isPlayer)
         {
-            // Not so important for now
+            TextBlock damageText = new TextBlock
+            {
+                Text = $"-{damage}",
+                FontSize = 24,
+                FontWeight = FontWeights.Bold,
+                Foreground = new SolidColorBrush(Color.FromRgb(0xFF, 0x4C, 0x4C))
+            };
+
+            // Healthbar des Spielers liegt bei (830, 492), die des Gegners bei (80, 52)
+            double left = isPlayer ? 900 : 150;
+            double top = isPlayer ? 470 : 30;
+
+            Canvas.SetLeft(damageText, left);
+            Canvas.SetTop(damageText, top);
+            GameCanvas.Children.Add(damageText);
+
+            TranslateTransform moveTransform = new TranslateTransform(0, 0);
+            damageText.RenderTransform = moveTransform;
+
+            DoubleAnimation moveUpAnimation = new DoubleAnimation
+            {
+                From = 0,
+                To = -40,
+                Duration = TimeSpan.FromSeconds(0.9),
+                EasingFunction = new QuadraticEase { EasingMode = EasingMode.EaseOut }
+            };
+
+            DoubleAnimation fadeOutAnimation = new DoubleAnimation
+            {
+                From = 1.0,
+                To = 0.0,
+                BeginTime = TimeSpan.FromSeconds(0.3),
+                Duration = TimeSpan.FromSeconds(0.6)
+            };
+
+            fadeOutAnimation.Completed += (sender, e) =>
+            {
+                GameCanvas.Children.Remove(damageText);
+            };
+
+            moveTransform.BeginAnimation(TranslateTransform.YProperty, moveUpAnimation);
+            damageText.BeginAnimation(UIElement.OpacityProperty, fadeOutAnimation);
         }
+        // --- KI Ende ---
+
+        // KI: Claude
+        // Prompt: Erstelle eine kleine Animation für das Einwechseln einer Frucht: das FruitControl soll
+        // klein und unsichtbar starten und dann mit einem leichten "Bounce" auf seine Zielgröße
+        // hochskalieren und gleichzeitig einblenden (Fade-In)
+        // --- KI Start ---
+        public void PlaySwitchInAnimation(UserControl fruitControl, double targetScaleX, double targetScaleY)
+        {
+            ScaleTransform scaleTransform = new ScaleTransform(0, 0);
+            fruitControl.RenderTransform = scaleTransform;
+            fruitControl.Opacity = 0;
+
+            DoubleAnimation scaleXAnimation = new DoubleAnimation
+            {
+                From = 0,
+                To = targetScaleX,
+                Duration = TimeSpan.FromSeconds(0.4),
+                EasingFunction = new BackEase { EasingMode = EasingMode.EaseOut, Amplitude = 0.4 }
+            };
+
+            DoubleAnimation scaleYAnimation = new DoubleAnimation
+            {
+                From = 0,
+                To = targetScaleY,
+                Duration = TimeSpan.FromSeconds(0.4),
+                EasingFunction = new BackEase { EasingMode = EasingMode.EaseOut, Amplitude = 0.4 }
+            };
+
+            DoubleAnimation fadeInAnimation = new DoubleAnimation
+            {
+                From = 0,
+                To = 1,
+                Duration = TimeSpan.FromSeconds(0.3)
+            };
+
+            scaleTransform.BeginAnimation(ScaleTransform.ScaleXProperty, scaleXAnimation);
+            scaleTransform.BeginAnimation(ScaleTransform.ScaleYProperty, scaleYAnimation);
+            fruitControl.BeginAnimation(UIElement.OpacityProperty, fadeInAnimation);
+        }
+        // --- KI Ende ---
 
         public void UpdateMoveButtons(Fruit playerFruit)
         {
