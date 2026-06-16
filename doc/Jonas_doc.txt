@@ -51,6 +51,16 @@
 
 12.6
 	Leben bei den switch Buttons werden nun geupdatet
+	Updated my documentation
+
+16.06 
+	Bugfixes wie das Gegner falsche Moves choosen.
+	Background verbessert da er zu klein war. 
+	Exit Button im Spiel hinzugefügt
+	Wenn Früchte sterben switchen erzwungen.
+	Animationen erstellt.
+
+
 
 
 	
