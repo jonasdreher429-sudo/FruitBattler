@@ -184,6 +184,7 @@ namespace FruitBattlerWPF.Pages_window
 
             if (TeamList == null || TeamList.Count >= 4)
             {
+                Logger.Warning($"Adding Fruit cancelled because team is already full.");
                 MessageBox.Show("Es dürfen nur 4 Früchte im Team sein");
                 return;
             }
@@ -192,18 +193,28 @@ namespace FruitBattlerWPF.Pages_window
             {
                 if(f.Name == CurrentSeletcted.Name)
                 {
+                    Logger.Warning($"Adding Fruit cancelled because Fruit is already in Team. Tried to add: {CurrentSeletcted.Name}");
                     MessageBox.Show("Es darf nicht zweimal die gleiche Frucht im Team sein");
                     return;
                 }
             }
             TeamList.Add(CurrentSeletcted);
+
+            string names = "";
+            foreach (Fruit f in TeamList)
+                names += f.Name + " ";
+            Logger.Information($"{CurrentSeletcted.Name} added to team. Team is now: {names}");
+
             UpdateTextBlockTeam();
         }
 
         private void BtnLoeschen_Click(object sender, RoutedEventArgs e)
         {
             if (CurrentSeletcted == null || TeamList == null || TeamList.Count == 0)
+            {
+                Logger.Debug("Deleting Fruit cancelled beacause invalid state.");
                 return;
+            }
 
             Fruit Delme = new Fruit();
             foreach (Fruit f in TeamList)
@@ -214,6 +225,7 @@ namespace FruitBattlerWPF.Pages_window
                 }
             }
             TeamList.Remove(Delme);
+            Logger.Information($"{CurrentSeletcted.Name} was removed from team.");
             UpdateTextBlockTeam();
         }
 
@@ -221,15 +233,18 @@ namespace FruitBattlerWPF.Pages_window
         {
             if (TeamList.Count < 4)
             {
-                
-                
-               
+                Logger.Warning("TeamBuilder closed and Team was incomplete");
                 MessageBox.Show("Team unvollständig");
                 this.DialogResult = false;
                 this.Close();
                 return;
 
             }
+
+            string names = "";
+            foreach (Fruit f in TeamList)
+                names += f.Name + " ";
+            Logger.Information($"Building Team successful. Team: {names}");
 
             this.DialogResult = true;
             this.Close();
@@ -239,9 +254,11 @@ namespace FruitBattlerWPF.Pages_window
 
         private void BtnLoad_Click(object sender, RoutedEventArgs e)
         {
+            Logger.Debug("Loading Team started.");
             TeamList = Save_load.Load();
             if (TeamList == null)
             {
+                Logger.Warning("Load failed so using empty list.");
                 TeamList = new List<Fruit>();
             }
             //KI: Gemini
@@ -250,6 +267,11 @@ namespace FruitBattlerWPF.Pages_window
             // KI Anfang
             else
             {
+                string names = "";
+                foreach (Fruit f in TeamList)
+                    names += f.Name + " ";
+                Logger.Information($"Team loaded. Team is: {names}");
+
                 // 2. Die geladenen Früchte reparieren (UserControls wieder zuweisen)
                 foreach (Fruit geladeneFrucht in TeamList)
                 {
@@ -274,6 +296,11 @@ namespace FruitBattlerWPF.Pages_window
 
         private void BtnSave_Click(object sender, RoutedEventArgs e)
         {
+            string names = "";
+            foreach (Fruit f in TeamList)
+                names += f.Name + " ";
+            Logger.Information($"Saving team started. Team: {names}");
+
             Save_load.save(TeamList);
         }
     }

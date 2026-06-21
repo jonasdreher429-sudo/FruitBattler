@@ -80,6 +80,8 @@ namespace FruitBattlerWPF.Classes
     {
         public static List<Fruit> CreateAllFruits()
         {
+            Logger.Debug("FruitGenerator start of creating all Fruits");
+
             List<Fruit> alleFruechte = new List<Fruit>();
 
             // ==========================================
@@ -195,6 +197,7 @@ namespace FruitBattlerWPF.Classes
             Fruit glanzkirsche = new Fruit("Glanzkirsche", Type.Licht, 60, 70, 55, 75, new Move[] { sleepMove, glanzStrahl, glanzGlut }, new GlanzkirscheUserControl());
             alleFruechte.Add(glanzkirsche);
 
+            Logger.Information($"FruitGenerator created {alleFruechte.Count} fruits");
             return alleFruechte;
         }
     }

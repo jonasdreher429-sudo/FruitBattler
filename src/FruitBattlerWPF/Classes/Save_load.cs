@@ -29,12 +29,18 @@ namespace FruitBattlerWPF.Classes
                 {
                     string inhalt = JsonSerializer.Serialize(fruits);
                     File.WriteAllText(filePath,inhalt);
+                    Logger.Information($"Team saved successfully to: {filePath}");
                     MessageBox.Show("Team erflogreich gespeichert");
                 }
-                catch 
+                catch (Exception ex)
                 {
+                    Logger.Error(ex, $"Error saving team to: {filePath}");
                     MessageBox.Show("Fehler beim speichern des Teams");
                 }
+            }
+            else
+            {
+                Logger.Debug("Saving was cancelled because dialog was closed.");
             }
         }
 
@@ -57,17 +63,26 @@ namespace FruitBattlerWPF.Classes
                     List<Fruit> fruits = JsonSerializer.Deserialize<List<Fruit>>(dateiInhalt);
                     if (fruits.Count != 4)
                     {
-                        throw new Exception("Team zu lang oder zu kurz");
+                        Logger.Warning($"Loaded team has invalid size. Size: {fruits.Count} File: {filePath}");
+                        throw new Exception("Team zu groß oder zu klein");
                     }
+
+                    string names = "";
+                    foreach (Fruit f in fruits)
+                        names += f.Name + " ";
+                    Logger.Information($"Team loaded successfully from: {filePath}. Team: {names}");
+
                     return fruits;
                     
                 }
-                catch
+                catch (Exception ex)
                 {
+                    Logger.Error(ex, $"Error loading team from: {filePath}");
                     MessageBox.Show($"Fehler beim Laden des Teams");
                     return null;
                 }
             }
+            Logger.Debug("Loading was cancelled because dialog closed.");
             return null;
         }
     }

@@ -81,9 +81,8 @@ namespace FruitBattlerWPF.Classes
             {
                 IsAlive = false;
             }
-
-
             // KI Ende
+            Logger.Debug($"{Name} received {finalDamage} damage from {enemyFruit.Name} with attack {move.Name}. HP: {CurrentHP} out of {MaxHP}");
         }
 
         public bool CheckAlive()

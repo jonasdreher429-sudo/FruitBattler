@@ -58,7 +58,13 @@ namespace FruitBattlerWPF.Classes
                         (UserControl)Activator.CreateInstance(zufallsFrucht.FruitControl.GetType())
                     );
                     EnemyTeam.Fruits.Add(klon);
+                    Logger.Debug($"{klon.Name} added to enemy team");
                 }
+
+                string names = "";
+                foreach (Fruit f in EnemyTeam.Fruits)
+                    names += f.Name + " ";
+                Logger.Information($"Enemy team ready. Team is: {names}");
 
 
             }
@@ -124,6 +130,11 @@ namespace FruitBattlerWPF.Classes
             if (bestmoveidx == -1)
             {
                 bestmoveidx = 0;
+                Logger.Debug($"Bot with Fruit: {ActiveEnemyFruit.Name} found no good move so is falling back to Sleep");
+            }
+            else
+            {
+                Logger.Debug($"Bot with Fruit: {ActiveEnemyFruit.Name} chose {Moveset[bestmoveidx].Name}");
             }
             return bestmoveidx;
         }

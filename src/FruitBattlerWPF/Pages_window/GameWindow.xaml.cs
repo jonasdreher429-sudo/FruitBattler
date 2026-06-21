@@ -29,6 +29,7 @@ namespace FruitBattlerWPF.Pages_window
         public GameWindow(FruitTeam playerTeam, FruitTeam enemyTeam, EnemyKI enemyKI)
         {
             InitializeComponent();
+            Logger.Information("GameWindow opened.");
 
             // Claude Prompt: jetzt kommt seltener aber immernoch diese fehlermeldung
             // System.ArgumentException: "Das angegebene Visual-Objekt ist bereits ein
@@ -75,7 +76,12 @@ namespace FruitBattlerWPF.Pages_window
 
             if (result == MessageBoxResult.Yes)
             {
+                Logger.Information("Player left the GameWindow.");
                 this.Close();
+            }
+            else
+            {
+                Logger.Debug("Exit dialog was cancelled.");
             }
         }
 
@@ -139,6 +145,7 @@ namespace FruitBattlerWPF.Pages_window
             // Dont switch if already active in batle
             if (newFruit == GameHandler.CurrentPlayerFruit)
             {
+                Logger.Warning($"Switch cancelled because {newFruit.Name} is already active.");
                 MessageBox.Show("Diese Frucht ist bereits im Kampf");
                 return;
             }
@@ -146,9 +153,12 @@ namespace FruitBattlerWPF.Pages_window
             // Dont switch if fruit is dead
             if (!newFruit.IsAlive)
             {
+                Logger.Warning($"Switch cancelled because {newFruit.Name} has been defeated.");
                 MessageBox.Show("Diese Frucht ist tot");
                 return;
             }
+
+            Logger.Information($"Player switched from {GameHandler.CurrentPlayerFruit.Name} to {newFruit.Name}");
 
 
             // Claude Prompt: Wie wechsle ich die usercontrol der frucht am besten?
@@ -236,6 +246,7 @@ namespace FruitBattlerWPF.Pages_window
             EnemyKI.EnemyDuenger = GameHandler.CurrentDungerEnemy;
             int enemyMoveIndex = EnemyKI.ChooseMove(GameHandler.CurrentPlayerTeam);
             Move enemyMove = GameHandler.CurrentEnemyFruit.MoveSet[enemyMoveIndex];
+            Logger.Debug($"Enemy {GameHandler.CurrentEnemyFruit.Name} chose {enemyMove.Name} costing {enemyMove.Duengercost} Duenger");
             GameHandler.CurrentDungerEnemy -= enemyMove.Duengercost;
 
             // KI: Claude
@@ -295,9 +306,12 @@ namespace FruitBattlerWPF.Pages_window
             // Check for Dünger Cost
             if (move.Duengercost > GameHandler.CurrentDungerPlayer)
             {
+                Logger.Warning($"{player.Name} cannot use {move.Name} because not enough Dunger ({GameHandler.CurrentDungerPlayer} out of {move.Duengercost} required)");
                 MessageBox.Show("Nicht genug Dünger in der Düngerreserve");
                 return;
             }
+
+            Logger.Information($"{player.Name} used {move.Name} against {enemy.Name}");
 
             // Player Attack
             GameHandler.CurrentDungerPlayer -= move.Duengercost;

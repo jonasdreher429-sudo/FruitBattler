@@ -26,6 +26,7 @@ namespace FruitBattlerWPF.Classes
             CurrentDungerPlayer = 2;
             CurrentDungerEnemy = 2;
             IsGameOver = false;
+            Logger.Information("GameHandler initialized.");
         }
 
         public GameHandler(FruitTeam playerTeam, FruitTeam enemyTeam) : this()
@@ -38,6 +39,7 @@ namespace FruitBattlerWPF.Classes
         {
             CurrentPlayerFruit = CurrentPlayerTeam.GetActiveFruit();
             CurrentEnemyFruit = CurrentEnemyTeam.GetActiveFruit();
+            Logger.Information("Game started.");
         }
 
         public void NextRound()
@@ -50,18 +52,26 @@ namespace FruitBattlerWPF.Classes
 
             CurrentDungerPlayer += dunger;
             CurrentDungerEnemy += dunger;
+            Logger.Debug($"Called NextRound. Round: {roundcount} Duenger: {dunger}. PlayerDunger : {CurrentDungerPlayer}. EnemyDunger: {CurrentDungerEnemy}");
         }
 
 
         public void ApplyMove(Fruit attacker, Fruit defender, Move move)
         {
             if (move.Damage == 0)
+            {
+                Logger.Debug($"{attacker.Name} used {move.Name} (no damage done).");
                 return;
+            }
 
+            int hpBefore = defender.CurrentHP;
             defender.ReceiveDamage(attacker, move);
+            int damageDealt = hpBefore - defender.CurrentHP;
+            Logger.Information($"{attacker.Name} used {move.Name} and dealt {damageDealt} damage to {defender.Name} ({hpBefore} HP to {defender.CurrentHP} HP)");
 
             if (!defender.IsAlive)
             {
+                Logger.Information($"{defender.Name} was defeated");
                 HandleFaint(defender);
             }
         }
@@ -77,20 +87,24 @@ namespace FruitBattlerWPF.Classes
         {
             if (!CurrentPlayerTeam.HasAliveFruit())
             {
+                Logger.Information("Player team was defeated so game over.");
                 IsGameOver = true;
                 return;
             }
 
             if (!CurrentEnemyTeam.HasAliveFruit())
             {
+                Logger.Information("Enemy team was defeated so player wins.");
                 IsGameOver = true;
                 return;
             }
 
             if (defender == CurrentEnemyFruit)
             {
+                string oldName = CurrentEnemyFruit.Name;
                 CurrentEnemyTeam.SwitchToNextAliveFruit();
                 CurrentEnemyFruit = CurrentEnemyTeam.GetActiveFruit();
+                Logger.Information($"Enemy switched from {oldName} to {CurrentEnemyFruit.Name}");
             }
         }
         // --- KI Ende ---

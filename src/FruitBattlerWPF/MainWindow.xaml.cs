@@ -31,6 +31,7 @@ namespace FruitBattlerWPF
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             allfruits = FruitGenerator.CreateAllFruits();
+            Logger.Information($"MainWindow loaded and generated {allfruits.Count} Fruits.");
         }
 
 
@@ -68,14 +69,26 @@ namespace FruitBattlerWPF
             // Abchecken ob Team vorhanden
             if(UsingTeam  == null || UsingTeam.Fruits.Count < 4)
             {
+                Logger.Warning("Couldn't start because team was not complete");
                 MessageBox.Show("Kein vollständiges Team ausgewählt bitte öffne den TeamBuilder");
                 return;
             }
 
 
-            UsingTeam = CloneTeam(CopyTeam); 
-            
+            UsingTeam = CloneTeam(CopyTeam);
+
+            string playerTeamNames = "";
+            foreach (Fruit f in UsingTeam.Fruits)
+                playerTeamNames += f.Name + " ";
+            Logger.Information($"Team cloned and game started. Team is: {playerTeamNames}");
+
             enemy.CreateRandomTeam(allfruits);
+
+            string enemyTeamNames = "";
+            foreach (Fruit f in enemy.EnemyTeam.Fruits)
+                enemyTeamNames += f.Name + " ";
+            Logger.Information($"Enemy team created. Enemy Team is: {enemyTeamNames}");
+
             GameWindow GameWindow = new GameWindow(UsingTeam, enemy.EnemyTeam, enemy);
             GameWindow.ShowDialog();
         }
@@ -84,6 +97,7 @@ namespace FruitBattlerWPF
 
         private void ButtonTeamBuilder_Click(object sender, RoutedEventArgs e)
         {
+            Logger.Debug("TeamBuilder opened.");
             TeamBuilderWindow teamBuilderWindow = new TeamBuilderWindow(allfruits);
             bool? result = teamBuilderWindow.ShowDialog();
             if (result == true)
@@ -92,6 +106,15 @@ namespace FruitBattlerWPF
                 UsingTeam = new FruitTeam(teamlist);
                 CopyTeam = UsingTeam;
                 // Team aus Team Builder ausgewählt und in Variable Using Team gespeichert
+
+                string names = "";
+                foreach (Fruit f in teamlist)
+                    names += f.Name + " ";
+                Logger.Debug($"Team used from TeamBuilder. Team: {names}");
+            }
+            else
+            {
+                Logger.Debug("TeamBuilder closed without team being selected.");
             }
         }
 

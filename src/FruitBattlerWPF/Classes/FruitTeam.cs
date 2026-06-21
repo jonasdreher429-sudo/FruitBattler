@@ -52,9 +52,11 @@ namespace FruitBattlerWPF.Classes
                 if (Fruits[i].IsAlive)
                 {
                     Active_Fruit_Index = i;
+                    Logger.Debug($"Bot Switched to {Fruits[i].Name}");
                     return true;
                 }
             }
+            Logger.Warning("No alive fruit found in bot team so no switch possible.");
             return false;
         }
         // --- KI Ende ---
