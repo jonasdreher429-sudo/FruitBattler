@@ -14,3 +14,6 @@
 	
 12.06
 	Made it so that if fruit is switched it also switches fruitname
+
+19.6 - 21.06
+	Added final logs and release of game in bin dir
