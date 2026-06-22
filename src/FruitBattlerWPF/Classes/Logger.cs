@@ -9,6 +9,8 @@ namespace FruitBattlerWPF.Classes
 {
     public static class Logger
     {
+        // Claude Prompt: Wie könnte ich eine logger class in c# wpf mit serilog machen
+        // Claude Start
         static Logger()
         {
             Log.Logger = new LoggerConfiguration()
@@ -50,5 +52,6 @@ namespace FruitBattlerWPF.Classes
         {
             Log.CloseAndFlush();
         }
+        // Claude Ende
     }
 }
