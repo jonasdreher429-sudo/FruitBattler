@@ -17,3 +17,7 @@
 
 19.6 - 21.06
 	Added final logs and release of game in bin dir
+22.06
+	Noticed missing comments to label Claude AI Usage in Logger.cs Class so added it
+	Made new Build of game and pushed it because I was unsure if i should do one after changing something
+	in code (even if it's just comments)
